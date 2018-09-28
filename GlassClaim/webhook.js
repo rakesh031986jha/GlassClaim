@@ -36,11 +36,12 @@ app.post("/webhook",async (req,res)=>{
     json: true
   };
   await requestAPI(options, function (error, response, body) {
-  
+  console.log('1------------',req.body.queryResult.intent.displayName);
    if (req.body.queryResult.intent.displayName=='GlassSize_7')
    {
     CreateClaim(request, response);
      };
+     console.log('last------------',body);
             res.send(body);
   });
 })
@@ -79,6 +80,7 @@ app.post('/claimCreate',function (req, res){
 
 function CreateClaim(req,res)
 {
+  console.log('inside create claim------------',req);
   var options = { method: 'POST',
      
   url: 'http://35.154.116.87:8080/cc/service/edge/fnol/cfnol',
@@ -116,13 +118,13 @@ function CreateClaim(req,res)
  
 
 request(options, function (error, response, body) {
-
+  console.log('2------------',body);
   if (error) throw new Error(error);
 console.log("Rakesh jha");
   var claimno = body.result;
   console.log(claimno);
   
-        
+  console.log('3------------',claimno);
           return res.json({"speech": "",
           "messages": [
             {
