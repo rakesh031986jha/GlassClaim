@@ -170,7 +170,7 @@ request(options, function (error, response, body) {
   if (error) throw new Error(error);
 
   var price = body.result;
-  console.log(price);
+  console.log(body.result);
   
   console.log('price 3------------',price);
           return res.json({"result":{"fulfillment": {
@@ -189,7 +189,7 @@ request(options, function (error, response, body) {
             ]
           }}});
 
-  console.log(body);
+  
 });
 
 }
