@@ -41,7 +41,7 @@ app.post("/webhook",async (req,res)=>{
    {
     CreateClaim(req,res);
      } else {
-  //    console.log('last------------',body);
+  //    
             res.send(body);
      }
   });
@@ -78,6 +78,11 @@ app.get('/chat', function (req, res) {
 app.post('/claimCreate',function (req, res){
       
 })
+
+var lossDate;
+var lossType;
+var lossCause;
+var description
 
 function CreateClaim(req,res)
 {
