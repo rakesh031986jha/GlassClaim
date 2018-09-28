@@ -36,7 +36,7 @@ app.post("/webhook",async (req,res)=>{
     json: true
   };
   await requestAPI(options, function (error, response, body) {
-   res.send(body);
+  
    if (req.body.queryResult.intent.displayName=='GlassSize_7')
    {
      var options = { method: 'POST',
@@ -78,13 +78,14 @@ app.post("/webhook",async (req,res)=>{
    request(options, function (error, response, body) {
    
      if (error) throw new Error(error);
-   
-    
+   console.log("Rakesh jha");
+     res.send(body);
    
      console.log(body);
    
    });
-            };
+     };
+            res.send(body);
   });
 })
 
