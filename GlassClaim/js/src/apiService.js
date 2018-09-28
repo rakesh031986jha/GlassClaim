@@ -104,7 +104,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                                 contentType: "application/json;",
                                 dataType: "json",
                                 success: function (response) {
-                                            console.log(response);
+                                            console.log("Rakesh Jha"+response);
                                             }})
 
                         }
