@@ -97,17 +97,17 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                         } else {
                             fallbackCount = 0;
                         }
-                        // if(response.result.action == "input.GlassSize"){
-                        //     $.ajax({
-                        //         type: "POST",
-                        //         url: "/claimCreate",
-                        //         contentType: "application/json;",
-                        //         dataType: "json",
-                        //         success: function (response) {
-                        //                     console.log(response);
-                        //                     }})
+                        if(response.result.action == "input.GlassSize"){
+                            $.ajax({
+                                type: "POST",
+                                url: "/claimCreate",
+                                contentType: "application/json;",
+                                dataType: "json",
+                                success: function (response) {
+                                            console.log(response);
+                                            }})
 
-                        // }
+                        }
                         if (response.result.action == "Optus") {
                             utils.captureTranscript(dataList);
                             fallbackCount, oFallbackCount = 0;
