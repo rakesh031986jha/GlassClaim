@@ -39,7 +39,7 @@ app.post("/webhook",async (req,res)=>{
   console.log('1------------',body);
    if (body.result.action=='input.GlassSize')
    {
-    CreateClaim();
+    CreateClaim(req,res);
      };
   //    console.log('last------------',body);
             res.send(body);
@@ -78,7 +78,7 @@ app.post('/claimCreate',function (req, res){
       
 })
 
-function CreateClaim()
+function CreateClaim(req,res)
 {
   //console.log('inside create claim------------',req);
   var options = { method: 'POST',
@@ -125,7 +125,7 @@ console.log("Rakesh jha");
   console.log(claimno);
   
   console.log('3------------',claimno);
-          return response.json({"fulfillment": {
+          return res.json({"fulfillment": {
             "speech": "",
             "messages": [
               {
