@@ -39,12 +39,8 @@ app.post("/webhook",async (req,res)=>{
   console.log('1------------',body);
    if (body.result.action=='input.GlassSize')
    {
-    var resultData=CreateClaim(req,res);
-    console.log("priceprice Jha"+resultData);
-    console.log(JSON.stringify(response));
-    if(resultData){
+     CreateClaim(req,res);
       priceConverter(req,res)
-    }
      } else {
   //    
             res.send(body);

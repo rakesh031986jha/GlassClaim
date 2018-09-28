@@ -135,6 +135,7 @@ define(["utils", "settings", "handlebars", 'jquery'], function (utils, settings,
                 if (qReply[i].replies.indexOf("Buisness") != -1) {
                     apiquickRepliesHtml += `<div class="quick-replies-buttons" style="display: -webkit-inline-box;">`
                     for (let j = 0; j < qReply[i].replies.length; j++) {
+                        qReply[i].replies.sort();
                             //apiquickRepliesHtml += `<button type="button"  class="btn btn-quick .pmd-btn-fab apiQuickreplybtnPayload" data-apiquickRepliesPayload="${qReply[i].replies[j]}"><img src="images/Query/${qReply[i].replies[j].replace(/ /g, '')}.svg" class="img-responsive quick-reply-icon"></button><div class="quick-reply-button-text" style="padding-left: 5px !important;">${qReply[i].replies[j]}</div></button>`
                             apiquickRepliesHtml += `<ul style="list-style-type: none;"><li><button type="button"  class="btn-quick .pmd-btn-fab apiquickRepliesPayload" data-apiquickRepliesPayload="${qReply[i].replies[j]}"><img src="avatar/image/${qReply[i].replies[j].replace(/ /g, '')}.svg" style="max-width:none !important;" class="img-responsive quick-reply-icon"></button></li><li><div class="quick-reply-button-text" style="padding-left: 5px !important;">${qReply[i].replies[j]}</div></li></ul>`
                             //<br><div class="quick-reply-button-text" style="display:block !important;text-align:left">${qReply[i].replies[j]}</div>
@@ -206,6 +207,7 @@ define(["utils", "settings", "handlebars", 'jquery'], function (utils, settings,
                 }
               
                 for (let j = 0; j < qReply[i].replies.length; j++) {
+                   var replies= qReply[i].replies.sort();
                     apiquickRepliesHtml += `<button type="button"  class="btn btn-quick .pmd-btn-fab multiplequickreplyfromapiai" data-multiplequickreplyfromapiai="${qReply[i].replies[j]}">${qReply[i].replies[j]}</button>`
             }
             apiquickRepliesHtml += `<div class="quickrepliesApireplayButton">`
