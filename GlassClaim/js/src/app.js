@@ -366,6 +366,21 @@ define(['jquery', 'settings', 'apiService', 'utils'], function ($, config, apiSe
             });
             e.preventDefault();
         });
+        //cash trna
+        $(document).on('click', '.cashButton', function (e) {
+            var payloadInput = $(this).data().cashButton;
+            processor.askBot(payloadInput, payloadInput, function (error, html, Liveengage) {
+                if (error) {
+                    console.log("error occured while processing your Request") //change into some inline fancy display, show error in chat window.
+                }
+                if (html) {
+                    msg_container.append(html);
+                    utils.scrollSmoothToBottom($('div.chat-body'));
+                }
+            });
+            e.preventDefault();
+        });
+        //window and glass
         $(document).on('click', '.multiplequickreplyfromapiai', function (e) {
             var payloadInput = $(this).data().multiplequickreplyfromapiai;
             processor.askBot(payloadInput, payloadInput, function (error, html, Liveengage) {

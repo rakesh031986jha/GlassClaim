@@ -37,14 +37,15 @@ app.post("/webhook",async (req,res)=>{
   };
   await requestAPI(options, function (error, response, body) {
   console.log('1------------',body);
-   if (body.result.action=='input.GlassSize')
-   {
-     CreateClaim(req,res);
-  //    priceConverter(req,res)
-     } else {
-  //    
-            res.send(body);
-     }
+    if (body.result.action=='input.GlassSize')
+    {
+      CreateClaim(req,res);
+  //     priceConverter(req,res)
+      } else {
+      
+             res.send(body);
+      }
+  res.send(body);
   });
 })
 

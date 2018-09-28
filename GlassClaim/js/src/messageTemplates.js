@@ -141,10 +141,11 @@ define(["utils", "settings", "handlebars", 'jquery'], function (utils, settings,
                             //<br><div class="quick-reply-button-text" style="display:block !important;text-align:left">${qReply[i].replies[j]}</div>
                     }
                 } 
-                    else if(qReply[i].replies.indexOf("Self Quote") != -1) {
-                        apiquickRepliesHtml += `<div class="quick-replies-buttons">`
+                    else if(qReply[i].replies.indexOf("Self Quotes") != -1) {
+                        apiquickRepliesHtml += `<div class="quick-replies-Cash">`
                         for (let j = 0; j < qReply[i].replies.length; j++) {
-                                apiquickRepliesHtml += `<button type="button"  class="btn btn-quick .pmd-btn-fab apiQuickreplybtnPayload" data-apiquickRepliesPayload="${qReply[i].replies[j]}"><img src="avatar/image/${qReply[i].replies[j].replace(/ /g, '')}.svg" class="img-responsive quick-reply-icon"> <div class="quick-reply-button-text" style="display:block !important;text-align:left">${qReply[i].replies[j]}</div></button>`
+                                apiquickRepliesHtml +=  `<ul style="list-style-type: none;"> <button type="button"  class="btn btn-quick .pmd-btn-fab cashButton" data-cashButton="${qReply[i].replies[j]}"> <div class="cash-reply-button-text" style="display:block !important;text-align:left">${qReply[i].replies[j]}</div><img src="avatar/image/${qReply[i].replies[j].replace(/ /g, '')}.svg" class="img-responsive.quick-reply-icon-cash>
+                                    "></button></ul>`
                         
                         }
                     }

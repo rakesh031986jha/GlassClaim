@@ -342,7 +342,7 @@ img.welcome-message-big{
 
   font-size :12pt;
   color : #777b7c;
-  font-family : Roboto-Regular !important;
+  font-family : Roboto !important;
     display: inline-block;
     height: 0%;
     text-align: left;
@@ -361,8 +361,8 @@ img.welcome-message-big{
 
 .list-group-item-text-user {
         line-height: 1.4;
-        font-size: 13pt;
-        font-family: Roboto;
+        font-size: 11pt;
+        font-family: Roboto !important;
         color:#4d4c4c;
         background-color: #e8f4f9;
         overflow-wrap: break-word;
@@ -399,6 +399,8 @@ img.welcome-message-big{
  .quick-reply-button-text {
   display : block;
   padding-left: 10px;
+  font-family: Roboto !important;
+  font-size: 11pt;
  }
 .apiQuickreplybtnPayload {
   display : inline-flex;
@@ -447,10 +449,11 @@ img.welcome-message-big{
 }
 .welcome-message-textWel{
   margin-top: 0px;
-  font-family: Roboto-Light !important;;
-  font-size: 18pt;
+  font-family: Roboto !important;
   color: #999999;
   position: relative;
+  font-size: 11pt;
+  font-weight: 300;
 }
 .carousel-body {
   background-color: white;
@@ -1107,4 +1110,39 @@ img.welcome-message-big{
  margin-top : -4%;
  padding-left : 38px
   
+ }
+
+
+ .quick-replies-Cash {
+  /*text-align: center;*/
+  width: 100px;
+  height: 100px;
+  margin-bottom: 4%;
+  margin-top : 3%;
+  padding-left : 52px;
+ }
+ .cash-reply-button-text {
+  display : block;
+  padding-left: 10px;
+  font-family: Roboto !important;
+  font-size: 11pt;
+ }
+.cashButton {
+  margin-right: 10px !important;
+  width:130px;
+  margin-right:20px;
+  margin-right: 10px !important;
+ }
+
+ .quick-reply-icon-cash{
+  margin-top: inherit;
+  margin-left: inherit;
+  margin-right: inherit;
+  float: left;
+  cursor: pointer;
+  visibility: inherit;
+  border-width: 0px;
+  width: 40px;
+  height: 40px;
+  margin: 0;
  }

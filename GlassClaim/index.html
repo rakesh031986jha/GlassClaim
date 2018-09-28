@@ -196,15 +196,15 @@
 
 <script>
      var loadFile = function(event) {
-       alert("Jha6");
-      var reader = new FileReader();
-      alert("Jha5");
-      reader.onload = function(){
-        alert("Jha4");
-        var output = document.getElementById('output');
-        alert("Jha3");
-       output.src = URL.createObjectURL(event.target.files[0]);
        
+      var reader = new FileReader();
+    
+        reader.onload = function(){
+        var output = document.getElementById('output');
+        output.src = URL.createObjectURL(event.target.files[0]);
+       
+      
+      
       }
       reader.readAsDataURL(event.target.files[0]);
     };
