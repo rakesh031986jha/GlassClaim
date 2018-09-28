@@ -123,10 +123,14 @@ console.log("Rakesh jha");
   console.log(claimno);
   
         
-          return res.json({
-                speech: 'All set john, your claim number is '+claimno,
-                displayText: 'All set john, your claim number is '+claimno
-             });
+          return res.json({"speech": "",
+          "messages": [
+            {
+              "type": 0,
+              "platform": "facebook",
+              "speech": "Hi "+claimno
+            }
+          ]});
         
 
 });
