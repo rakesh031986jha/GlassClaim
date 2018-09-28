@@ -125,7 +125,7 @@ console.log("Rakesh jha");
   console.log(claimno);
   
   console.log('3------------',claimno);
-          return res.json({"speech": "",
+          return res({"speech": "",
           "messages": [
             {
               "type": 0,
