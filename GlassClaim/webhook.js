@@ -123,16 +123,16 @@ request(options, function (error, response, body) {
 console.log("Rakesh jha");
   var claimno = body.result;
   console.log(claimno);
-  response.send({"speech": "",
-  "messages": [
-    {
-      "type": 0,
-      "platform": "facebook",
-      "speech": "Hi "+claimno
-    }
-  ]})
+ 
   console.log('3------------',claimno);
-  //        return ();
+          return ({"speech": "",
+          "messages": [
+            {
+              "type": 0,
+              "platform": "facebook",
+              "speech": "Hi "+claimno
+            }
+          ]});
         
 
 });
