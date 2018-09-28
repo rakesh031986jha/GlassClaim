@@ -145,12 +145,57 @@ console.log("Rakesh jha");
               }
             ]
           }}});
+      if(claimno!==null){
+        priceConverter(response);
+      }
         
 
 });
 
 }
 
+function priceConverter(res){
+  var options = { method: 'POST',
+  url: 'http://35.154.116.87:7999/aa/getMockGlassCost',
+  headers: 
+   { 'postman-token': '225193bc-ade0-bb34-6a7e-b6e8851b7c3b',
+     'cache-control': 'no-cache',
+     'content-type': 'application/json' },
+  body: 
+   { height: 70,
+     width: 30,
+     thickness: 33,
+     glassType: 'Safety Laminated Glass',
+     windowType: 'Double Hung Windows' },
+  json: true };
+
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+
+  var price = body.result;
+  console.log(price);
+  
+  console.log('3------------',price);
+          return res.json({"result":{"fulfillment": {
+            "speech": "",
+            "messages": [
+              {
+                "type": 0,
+                "platform": "facebook",
+                "speech": "Based on the quotes received from the market, you are entitled to a claims payment of USD "+ price +"."+
+                           "We've added an additional 10% to the market rates to cover any additional expenses that you may incur "
+              },
+              {
+                "type": 0,
+                "speech": ""
+              }
+            ]
+          }}});
+
+  console.log(body);
+});
+
+}
 
 
 

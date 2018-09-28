@@ -1092,9 +1092,12 @@ img.welcome-message-big{
 .multiplequickreplyfromapiai{
   
   margin-right: 10px !important;
-  width:150px;
+  width:130px;
   margin-right:20px;
-  background-color: #0097d6;
+ background-color:#fff;
+  margin-left:63px;
+  color:#0097d6 !important;
+  
 }
 
 .quickrepliesApireplayButton {
