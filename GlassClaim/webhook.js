@@ -36,11 +36,11 @@ app.post("/webhook",async (req,res)=>{
     json: true
   };
   await requestAPI(options, function (error, response, body) {
-  console.log('1------------',req.body);
-  //  if (req.body.result.action=='input.GlassSize')
-  //  {
-  //   CreateClaim();
-  //    };
+  console.log('1------------',body);
+   if (body.result.action=='input.GlassSize')
+   {
+    CreateClaim();
+     };
   //    console.log('last------------',body);
             res.send(body);
   });
