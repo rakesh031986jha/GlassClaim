@@ -132,7 +132,7 @@ console.log("Rakesh jha");
               {
                 "type": 0,
                 "platform": "facebook",
-                "speech": `Your Claim number is <div style="color:red"> `+claimno+`</div>`
+                "speech": "Your Claim number is "+claimno
               },
               {
                 "type": 0,
