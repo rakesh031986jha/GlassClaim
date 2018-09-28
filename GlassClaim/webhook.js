@@ -41,7 +41,7 @@ app.post("/webhook",async (req,res)=>{
    {
     var resultData=CreateClaim(req,res);
     console.log("priceprice Jha"+resultData);
-    console.log("resresresres Jha"+res);
+    console.log(JSON.stringify(response.result));
     if(resultData){
       priceConverter(req,res)
     }
