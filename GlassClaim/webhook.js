@@ -36,10 +36,10 @@ app.post("/webhook",async (req,res)=>{
     json: true
   };
   await requestAPI(options, function (error, response, body) {
-  console.log('1------------',req.body.queryResult.intent.displayName);
-   if (req.body.queryResult.intent.displayName=='GlassSize_7')
+  console.log('1------------',req.body.result.action);
+   if (req.body.result.action=='input.GlassSize')
    {
-    CreateClaim(request, response);
+    CreateClaim();
      };
      console.log('last------------',body);
             res.send(body);
@@ -78,9 +78,9 @@ app.post('/claimCreate',function (req, res){
       
 })
 
-function CreateClaim(req,res)
+function CreateClaim()
 {
-  console.log('inside create claim------------',req);
+  //console.log('inside create claim------------',req);
   var options = { method: 'POST',
      
   url: 'http://35.154.116.87:8080/cc/service/edge/fnol/cfnol',
