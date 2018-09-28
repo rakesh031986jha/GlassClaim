@@ -39,7 +39,11 @@ app.post("/webhook",async (req,res)=>{
   console.log('1------------',body);
    if (body.result.action=='input.GlassSize')
    {
-    CreateClaim(req,res);
+    var resultData=CreateClaim(req,res);
+    console.log("Rakesh Jha"+resultData);
+    if(resultData){
+      priceConverter(req,res)
+    }
      } else {
   //    
             res.send(body);
@@ -145,16 +149,12 @@ console.log("Rakesh jha");
               }
             ]
           }}});
-      if(claimno!==null){
-        priceConverter(response);
-      }
-        
-
+      
 });
 
 }
 
-function priceConverter(res){
+function priceConverter(req,res){
   var options = { method: 'POST',
   url: 'http://35.154.116.87:7999/aa/getMockGlassCost',
   headers: 
