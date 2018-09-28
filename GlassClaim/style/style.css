@@ -361,8 +361,8 @@ img.welcome-message-big{
 
 .list-group-item-text-user {
         line-height: 1.4;
-        font-family: Roboto-Regular !important;;
-        font-size : 12pt;
+        font-size: 13pt;
+        font-family: Roboto;
         color:#4d4c4c;
         background-color: #e8f4f9;
         overflow-wrap: break-word;
