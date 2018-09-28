@@ -77,7 +77,7 @@ app.post('/claimCreate',function (req, res){
   var options = {
     url: 'http://35.154.116.87:8080/cc/service/edge/fnol/cfnol',
     headers:{
-      'Authorization': 'Basic ' + new Buffer(su + ':' + gw).toString('base64'),
+      'Authorization': 'Basic',
       accept: 'application/json',
       'content-type': 'application/json'
     },
