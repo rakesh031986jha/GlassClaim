@@ -123,7 +123,7 @@ request(options, function (error, response, body) {
 console.log("Rakesh jha");
   var claimno = body.result;
   console.log(claimno);
-  res.send({"speech": "",
+  response.send({"speech": "",
   "messages": [
     {
       "type": 0,
