@@ -169,7 +169,7 @@ function priceConverter(req,res){
 request(options, function (error, response, body) {
   if (error) throw new Error(error);
 
-  var price = body.result.glassCost;
+  var price = body.result;
   console.log(price);
   
   console.log('price 3------------',price);
