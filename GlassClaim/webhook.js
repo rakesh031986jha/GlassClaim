@@ -39,51 +39,7 @@ app.post("/webhook",async (req,res)=>{
   
    if (req.body.queryResult.intent.displayName=='GlassSize_7')
    {
-     var options = { method: 'POST',
-     
-     url: 'http://35.154.116.87:8080/cc/service/edge/fnol/cfnol',
-   
-     headers:
-   
-      { 'postman-token': 'ff149a5b-daaf-0000-0b8c-5301c162be75',
-   
-        'cache-control': 'no-cache',
-   
-        authorization: 'Basic c3U6Z3c=',
-   
-        accept: 'application/json',
-   
-        'content-type': 'application/json' },
-   
-     body:
-   
-      { jsonrpc: '2.0',
-   
-        method: 'createClaimForHomeOwners',
-   
-        params:
-   
-         [ { lossDate: '2018-09-27T00:00:00Z',
-   
-             lossType: 'PR',
-   
-             lossCause: 'glassbreakage',
-   
-             description: 'windowcrashed' } ] },
-   
-     json: true };
-   
-    
-   
-   request(options, function (error, response, body) {
-   
-     if (error) throw new Error(error);
-   console.log("Rakesh jha");
-     res.send(body);
-   
-     console.log(body);
-   
-   });
+    CreateClaim(request, response);
      };
             res.send(body);
   });
@@ -121,6 +77,61 @@ app.post('/claimCreate',function (req, res){
       
 })
 
+function CreateClaim(req,res)
+{
+  var options = { method: 'POST',
+     
+  url: 'http://35.154.116.87:8080/cc/service/edge/fnol/cfnol',
+
+  headers:
+
+   { 'postman-token': 'ff149a5b-daaf-0000-0b8c-5301c162be75',
+
+     'cache-control': 'no-cache',
+
+     authorization: 'Basic c3U6Z3c=',
+
+     accept: 'application/json',
+
+     'content-type': 'application/json' },
+
+  body:
+
+   { jsonrpc: '2.0',
+
+     method: 'createClaimForHomeOwners',
+
+     params:
+
+      [ { lossDate: '2018-09-27T00:00:00Z',
+
+          lossType: 'PR',
+
+          lossCause: 'glassbreakage',
+
+          description: 'windowcrashed' } ] },
+
+  json: true };
+
+ 
+
+request(options, function (error, response, body) {
+
+  if (error) throw new Error(error);
+console.log("Rakesh jha");
+  var claimno = body.result;
+  console.log(claimno);
+  
+        
+          return res.json({
+                speech: 'All set john, your claim number is '+claimno,
+                displayText: 'All set john, your claim number is '+claimno
+             });
+        
+
+});
+
+}
 
 
 
