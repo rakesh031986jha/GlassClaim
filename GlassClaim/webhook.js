@@ -40,7 +40,8 @@ app.post("/webhook",async (req,res)=>{
    if (body.result.action=='input.GlassSize')
    {
     var resultData=CreateClaim(req,res);
-    console.log("Rakesh Jha"+resultData);
+    console.log("priceprice Jha"+resultData);
+    console.log("resresresres Jha"+res);
     if(resultData){
       priceConverter(req,res)
     }
@@ -175,7 +176,7 @@ request(options, function (error, response, body) {
   var price = body.result.glassCost;
   console.log(price);
   
-  console.log('3------------',price);
+  console.log('price 3------------',price);
           return res.json({"result":{"fulfillment": {
             "speech": "",
             "messages": [
