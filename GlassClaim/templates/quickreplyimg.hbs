@@ -8,12 +8,12 @@
         <table border="0" cellpadding="0" cellspacing="0">
         <tr>
         <td style="vertical-align:top;"><img width="40" height="40" class="bot-logo-image" style="border:none;" /></td><td><p class="list-group-item-quick-reply-space">{{{payload.facebook.text}}}</p>{{/key_value}}
-        <div class="quick-replies-buttons">
+        <div class="quick-replies-buttons" style="display:content">
         {{#each payload.facebook.quick_replies}} 
         {{#if payload}}
-        <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" 
+        <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload btn-img" 
            data-quickRepliesPayload="{{payload}}">
-                {{title}}</button>
+                <img src="http://placehold.it/30x30" width="30" height="30"/><span>{{title}}</span></button>
             {{else if url}}
             <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" 
             onClick="window.location.href='{{url}}'; 'height=400,width=600'">{{title}}</button>

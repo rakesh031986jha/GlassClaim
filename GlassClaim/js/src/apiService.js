@@ -252,6 +252,16 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                             }, "quickreplies");
                             callback(null, cardHTML);
                         }
+                        if (isQuickReplyImg) {
+                            let cardHTML = cards({
+                                "payload": response.result.fulfillment.messages,
+                                "senderName": config.botTitle,
+                                "senderAvatar": config.botAvatar,
+                                "time": utils.currentTime(),
+                                "className": ''
+                            }, "quickrepliesimg");
+                            callback(null, cardHTML);
+                        }
                         if (multiplequickreplyfromapiai) {
                             let cardHTML = cards(response.result.fulfillment.messages, "multiplequickreplyfromapiai");
                             callback(null, cardHTML);

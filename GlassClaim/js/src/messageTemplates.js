@@ -98,6 +98,12 @@ define(["utils", "settings", "handlebars", 'jquery'], function (utils, settings,
         return html;
     }
 
+    methods.quickrepliesimg = (data) => {
+        var compiledTemplate = handlebars.getTemplate('quickreplyimg');
+        let html = compiledTemplate(data);
+        return html;
+    }
+
     methods.carousel = (data, uniqueId) => {
         var compiledTemplate = handlebars.getTemplate('carousel');
         data["uniqueId"] = uniqueId;
