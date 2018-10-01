@@ -196,7 +196,21 @@
 
 <script>
   var loadFile = function(event) {
-       
+    function guid() {
+  function s4() {
+    return Math.floor((1 + Math.random()) * 0x10000)
+      .toString(16)
+      .substring(1);
+  }
+  return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+}
+
+    let uuid = !localStorage.getItem('uuid') ? localStorage.setItem('uuid', guid()) : localStorage.getItem('uuid');
+
+this.options = {
+    sessionId: uuid,
+    lang: "en"
+};
        var reader = new FileReader();
      
          reader.onload = function(){
