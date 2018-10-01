@@ -416,7 +416,7 @@ img.welcome-message-big{
   background-color: #e8f4f9;
      overflow-wrap: break-word;
      max-width: 100%;
-     border-radius: 10px;
+     border-radius: 0px 0px 10px 10px;
      display: inline-block;
      position: relative;
      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.21), 0 6px 20px 0 rgba(0, 0, 0, 0);
@@ -490,13 +490,13 @@ img.welcome-message-big{
   background-color: #e8f4f9;
   overflow-wrap: break-word;
   max-width: 100%;
-  /* border-radius: 10px; */
+  border-radius: 0px 0px 10px 10px;
   /* display: inline-block; */
   position: relative;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.21), 0 6px 20px 0 rgba(0, 0, 0, 0);
   padding: 15px 10px;
   margin-right: 0px;
-  margin-left: 56px;
+  margin-left: 13px;
 }
 
 .main-container {
