@@ -55,6 +55,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                         let isCardorCarousel = false;
                         let isImage = false;
                         let isQuickReply = false;
+                        let isQuickReplyImg = false;
                         let isQuickReplyFromApiai = false;
                         let quickreplies = false;
                         let multiplequickreplyfromapiai = false;
@@ -179,6 +180,10 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                                         //Quick Replies
                                         if (msgfulfill.payload.facebook.hasOwnProperty("quick_replies")) {
                                             isQuickReply = (msgfulfill.payload.facebook.quick_replies.length > 0) ? true : false;
+
+                                        }
+                                        if (msgfulfill.payload.facebook.hasOwnProperty("quick_replies_img")) {
+                                            isQuickReplyImg = (msgfulfill.payload.facebook.quick_replies.length > 0) ? true : false;
 
                                         }
 
