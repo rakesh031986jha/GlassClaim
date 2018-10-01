@@ -195,18 +195,18 @@
 <script type="text/javascript" src="https://lpcdn.lpsnmedia.net/api/chat/public/lpChat.min.js"></script>
 
 <script>
-     var loadFile = function(event) {
+  var loadFile = function(event) {
        
-      var reader = new FileReader();
-    
-        reader.onload = function(){
-        var output = document.getElementById('output');
-        output.style.display = "block";
-        output.src = URL.createObjectURL(event.target.files[0]);
-      }
-      reader.readAsDataURL(event.target.files[0]);  
-        //fireEvent(eventArgs) {
-            var event = { "name": "upload" };
+       var reader = new FileReader();
+     
+         reader.onload = function(){
+         var output = document.getElementById('output');
+         output.style.display = "block";
+         output.src = URL.createObjectURL(event.target.files[0]);
+       }
+       reader.readAsDataURL(event.target.files[0]);
+
+       var event = { "name": "upload" };
             $.ajax({
                 type: "POST",
                 url: "https://api.api.ai/v1/query?v=20150910",
@@ -225,10 +225,23 @@
                     // }
                 }
             });
-        //};
+     };
+    //  var loadFile = function(event) {
+       
+    //   var reader = new FileReader();
+    
+    //     reader.onload = function(){
+    //     var output = document.getElementById('output');
+    //     output.style.display = "block";
+    //     output.src = URL.createObjectURL(event.target.files[0]);
+    //   }
+    //   reader.readAsDataURL(event.target.files[0]);  
+    //     //fireEvent(eventArgs) {
+            
+    //     //};
       
      
-    };
+    // };
   </script>
 
 </html>
