@@ -140,7 +140,7 @@ define(["utils", "settings", "handlebars", 'jquery'], function (utils, settings,
                             console.log('payload for qr ----- ',data.payload[i].payload.facebook.quick_replies[j].hasOwnProperty('payload'));
                             console.log('payload for qr val ----- ',data.payload[i].payload.facebook.quick_replies[j].payload);
                             console.log('payload for qr title ----- ',data.payload[i].payload.facebook.quick_replies[j].title);
-                            quickRepliesHtml += `<button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickRepliesPayload="${data.payload[i].payload.facebook.quick_replies[j].payload}"><img src="http://placehold.it/30x30" width="30" height="30"/><span>${data.payload[i].payload.facebook.quick_replies[j].title}</span></button>`
+                            quickRepliesHtml += `<button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload btn-img" data-quickRepliesPayload="${data.payload[i].payload.facebook.quick_replies[j].payload}"><img src="http://placehold.it/30x30" width="30" height="30"/><span>${data.payload[i].payload.facebook.quick_replies[j].title}</span></button>`
                         }
                         else if (data.payload[i].payload.facebook.quick_replies[j].hasOwnProperty('url')) {
                             console.log("URL : " + data.payload[i].payload.facebook.quick_replies[j].url);
