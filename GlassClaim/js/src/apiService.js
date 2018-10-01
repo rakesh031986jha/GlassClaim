@@ -183,7 +183,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
 
                                         }
                                         if (msgfulfill.payload.facebook.hasOwnProperty("quick_replies_img")) {
-                                            isQuickReplyImg = (msgfulfill.payload.facebook.quick_replies.length > 0) ? true : false;
+                                            isQuickReplyImg = (msgfulfill.payload.facebook.quick_replies_img.length > 0) ? true : false;
 
                                         }
 
