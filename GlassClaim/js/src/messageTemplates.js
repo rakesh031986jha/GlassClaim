@@ -224,14 +224,24 @@ define(["utils", "settings", "handlebars", 'jquery'], function (utils, settings,
         count++;
         console.log(count);
        
-        let html = `<li class="list-group-item background-color-custom">
+        let html = `<li class="animated fadeInLeft list-group-item background-color-custom">
+        <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+        <td style="vertical-align:top;">
+            <img width="35" height="35" class="bot-logo-image" style="border:none;" /></td>
+            <td><li class="list-group-item background-color-custom">
       
         <div class="media-body bot-txt-space animated fadeInLeft">`
         
         html += `<p class="list-group-item-text-bot beforeAfter">${data.payload} <div class="upload-btn-wrapper"><button class="btn-upload">UPLOAD PHOTO</button><input type="file" onchange="loadFile(event)"></div><img id="output" width="50px" height="50px" style="display: none;" disabled/><span class="bot-res-timestamp abs receiver"> ${data.time}</span></p>`;
         
         html += `</div>
-        </li>`;
+        </li></td>
+        </tr>
+    </table>
+
+
+    </li>`;
         
         return html;
        
