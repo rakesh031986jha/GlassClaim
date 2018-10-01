@@ -200,7 +200,9 @@
        var reader = new FileReader();
      
          reader.onload = function(){
+           console.log(event);
          var output = document.getElementById('output');
+         console.log(output);
          output.style.display = "block";
          output.src = URL.createObjectURL(event.target.files[0]);
        }
