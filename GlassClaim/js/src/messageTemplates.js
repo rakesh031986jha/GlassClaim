@@ -228,7 +228,7 @@ define(["utils", "settings", "handlebars", 'jquery'], function (utils, settings,
       
         <div class="media-body bot-txt-space animated fadeInLeft">`
         
-        html += `<p class="list-group-item-text-bot beforeAfter">${data.payload} <input type="file"  onchange="loadFile(event)"><img id="output" width="50px" height="50px" /><span class="bot-res-timestamp abs receiver"> ${data.time}</span></p>`;
+        html += `<p class="list-group-item-text-bot beforeAfter">${data.payload} <div class="upload-btn-wrapper"><button class="btn-upload">Upload a file</button><input type="file" onchange="loadFile(event)"></div><img id="output" width="50px" height="50px" disabled/><span class="bot-res-timestamp abs receiver"> ${data.time}</span></p>`;
         
         html += `</div>
         </li>`;
