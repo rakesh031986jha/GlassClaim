@@ -3,13 +3,13 @@
    
         {{#each payload}} 
         {{#if_eq platform "facebook"}} 
-        {{#key_value payload.facebook.quick_replies}}
+        {{#key_value payload.facebook.quick_replies_img}}
         {{#key_value payload.facebook.text}}  
         <table border="0" cellpadding="0" cellspacing="0">
         <tr>
         <td style="vertical-align:top;"><img width="40" height="40" class="bot-logo-image" style="border:none;" /></td><td><p class="list-group-item-quick-reply-space">{{{payload.facebook.text}}}</p>{{/key_value}}
         <div class="quick-replies-buttons" style="display:content">
-        {{#each payload.facebook.quick_replies}} 
+        {{#each payload.facebook.quick_replies_img}} 
         {{#if payload}}
         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload btn-img" 
            data-quickRepliesPayload="{{payload}}">
