@@ -106,62 +106,112 @@ define(["utils", "settings", "handlebars", 'jquery'], function (utils, settings,
     }
 
     methods.quickrepliesfromapiai = (data) => {
-        
-        var apiquickRepliesHtml = `<li class="list-group-item background-color-custom">
-        <div class="media-body animated fadeInLeft">`
-        let qReply;
-        if (data.payload) {
-            qReply = data.payload;
-        } else {
-            qReply = data;
-        }
+        var quickRepliesHtml = `<li class="list-group-item background-color-custom">
 
-        for (let i in qReply) {
-            if (qReply[i].platform == "facebook" && qReply[i].type == "2") {
-                if (data.responseIndex) {
-                    apiquickRepliesHtml += `<img style="border-radius:50%;border:2px solid white;float: left;margin-right: 10px;" width="40" height="40" src='${settings.botAvatar}'/>`
-                    if (qReply[i].title.trim().length) {
-                        apiquickRepliesHtml += `<p class="list-group-item-quick-reply-space beforeAfter">${qReply[i].title}</p>`
-                    }
-                } else {
-                   
-                    if (qReply[i].title.trim().length) {
-                        apiquickRepliesHtml += `<img style="border-radius:50%;float: left;margin-right: 10px;" width="40" height="40" src='avatar/blank.ico'/><p class="list-group-item-quick-reply-space">${qReply[i].title}</p>`
-                    }
+        <div class="media-body animated fadeInLeft"><img width="35" height="35" class="bot-logo-image" style="border:none;">`;
+
+        for (let i in data.payload) {
+
+
+            if (data.payload[i].platform == "facebook") {
+                console.log('QR ----------- ',data.payload[i]);
+                if(data.payload[i].type == 0) {
+                    let html = `<li class="animated fadeInLeft list-group-item background-color-custom">
+        <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+        <td style="vertical-align:top;">
+            <img width="35" height="35" class="bot-logo-image" style="border:none;" /></td>
+            <td><div class="media-body bot-txt-space">
+                <p class="list-group-item-text-bot">${data.payload[i].speech}</p>
+                <p class="bot-res-timestamp"><small> <img style="border-radius:50%;border:2px solid white;" class="welcome-message" width="20" height="20"/>${data.time}</small></p>
+
+            </div></td>
+            </tr>
+        </table>
+
+
+        </li>`;
 
                 }
-               
+                else {
+                    quickRepliesHtml += `<p class="list-group-item-quick-reply-space">${data.payload[i].payload.facebook.text}</p><div class="quick-replies-buttons">`;
+                    for (var j = 0; j < data.payload[i].payload.facebook.quick_replies.length; j++) {
+                        if (data.payload[i].payload.facebook.quick_replies[j].hasOwnProperty('payload')) {
+                            console.log('payload for qr ----- ',data.payload[i].payload.facebook.quick_replies[j].hasOwnProperty('payload'));
+                            console.log('payload for qr val ----- ',data.payload[i].payload.facebook.quick_replies[j].payload);
+                            console.log('payload for qr title ----- ',data.payload[i].payload.facebook.quick_replies[j].title);
+                            quickRepliesHtml += `<button type="button"  class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickRepliesPayload="${data.payload[i].payload.facebook.quick_replies[j].payload}">${data.payload[i].payload.facebook.quick_replies[j].title}</button>`
+                        }
+                        else if (data.payload[i].payload.facebook.quick_replies[j].hasOwnProperty('url')) {
+                            console.log("URL : " + data.payload[i].payload.facebook.quick_replies[j].url);
+                            quickRepliesHtml += `<button type="button"  class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" onClick="window.location.href='${data.payload[i].payload.facebook.quick_replies[j].url}'; 'height=400,width=600'" >${data.payload[i].payload.facebook.quick_replies[j].title}</button>`
 
-                if (qReply[i].replies.indexOf("Buisness") != -1) {
-                    apiquickRepliesHtml += `<div class="quick-replies-buttons" style="display: -webkit-inline-box;">`
-                    for (let j = 0; j < qReply[i].replies.length; j++) {
-                        qReply[i].replies.sort();
-                            //apiquickRepliesHtml += `<button type="button"  class="btn btn-quick .pmd-btn-fab apiQuickreplybtnPayload" data-apiquickRepliesPayload="${qReply[i].replies[j]}"><img src="images/Query/${qReply[i].replies[j].replace(/ /g, '')}.svg" class="img-responsive quick-reply-icon"></button><div class="quick-reply-button-text" style="padding-left: 5px !important;">${qReply[i].replies[j]}</div></button>`
-                            apiquickRepliesHtml += `<ul style="list-style-type: none;"><li><button type="button"  class="btn-quick .pmd-btn-fab apiquickRepliesPayload" data-apiquickRepliesPayload="${qReply[i].replies[j]}"><img src="avatar/image/${qReply[i].replies[j].replace(/ /g, '')}.svg" style="max-width:none !important;" class="img-responsive quick-reply-icon"></button></li><li><div class="quick-reply-button-text" style="padding-left: 5px !important;">${qReply[i].replies[j]}</div></li></ul>`
-                            //<br><div class="quick-reply-button-text" style="display:block !important;text-align:left">${qReply[i].replies[j]}</div>
-                    }
-                } 
-                    else if(qReply[i].replies.indexOf("Self Quotes") != -1) {
-                        apiquickRepliesHtml += `<div class="quick-replies-Cash">`
-                        for (let j = 0; j < qReply[i].replies.length; j++) {
-                                apiquickRepliesHtml +=  `<ul style="list-style-type: none;"> <button type="button"  class="btn btn-quick .pmd-btn-fab cashButton" data-cashButton="${qReply[i].replies[j]}"> <div class="cash-reply-button-text" style="display:block !important;text-align:left">${qReply[i].replies[j]}</div><img src="avatar/image/${qReply[i].replies[j].replace(/ /g, '')}.svg" class="img-responsive.quick-reply-icon-cash>
-                                    "></button></ul>`
-                        
+                        }
+                        else if (data.payload[i].payload.facebook.quick_replies[j].hasOwnProperty('tab')) {
+                            console.log("TAB : " + data.payload[i].payload.facebook.quick_replies[j].tab);
+                            quickRepliesHtml += `<button type="button"  class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" onClick="window.open('${data.payload[i].payload.facebook.quick_replies[j].tab}','_blank'); " >${data.payload[i].payload.facebook.quick_replies[j].title}</button>`
                         }
                     }
-                else {
-                    apiquickRepliesHtml += `<div class="quick-replies-buttons">`
-                    for (let j = 0; j < qReply[i].replies.length; j++) {
-                        apiquickRepliesHtml += `<div class="quickrepliesApi-buttons">`
-                            apiquickRepliesHtml += `<button type="button"  class="btn btn-quick .pmd-btn-fab apiQuickreplybtnPayload" data-apiquickRepliesPayload="${qReply[i].replies[j]}">${qReply[i].replies[j]}</button>`
-                    }
                 }
-            }
+          }
         }
-        apiquickRepliesHtml += `</div>`;
+        quickRepliesHtml += `</div><p class="bot-res-timestamp-qr"><small> <img style="border-radius:50%;border:2px solid white;" width="20" height="20" class="welcome-message"/>${data.time}</small></p></div></li>`
+        return quickRepliesHtml;
+        // var apiquickRepliesHtml = `<li class="list-group-item background-color-custom">
+        // <div class="media-body animated fadeInLeft">`
+        // let qReply;
+        // if (data.payload) {
+        //     qReply = data.payload;
+        // } else {
+        //     qReply = data;
+        // }
+
+        // for (let i in qReply) {
+        //     if (qReply[i].platform == "facebook" && qReply[i].type == "2") {
+        //         if (data.responseIndex) {
+        //             apiquickRepliesHtml += `<img style="border-radius:50%;border:2px solid white;float: left;margin-right: 10px;" width="40" height="40" src='${settings.botAvatar}'/>`
+        //             if (qReply[i].title.trim().length) {
+        //                 apiquickRepliesHtml += `<p class="list-group-item-quick-reply-space beforeAfter">${qReply[i].title}</p>`
+        //             }
+        //         } else {
+                   
+        //             if (qReply[i].title.trim().length) {
+        //                 apiquickRepliesHtml += `<img style="border-radius:50%;float: left;margin-right: 10px;" width="40" height="40" src='avatar/blank.ico'/><p class="list-group-item-quick-reply-space">${qReply[i].title}</p>`
+        //             }
+
+        //         }
+               
+
+        //         if (qReply[i].replies.indexOf("Buisness") != -1) {
+        //             apiquickRepliesHtml += `<div class="quick-replies-buttons" style="display: -webkit-inline-box;">`
+        //             for (let j = 0; j < qReply[i].replies.length; j++) {
+        //                 qReply[i].replies.sort();
+        //                     //apiquickRepliesHtml += `<button type="button"  class="btn btn-quick .pmd-btn-fab apiQuickreplybtnPayload" data-apiquickRepliesPayload="${qReply[i].replies[j]}"><img src="images/Query/${qReply[i].replies[j].replace(/ /g, '')}.svg" class="img-responsive quick-reply-icon"></button><div class="quick-reply-button-text" style="padding-left: 5px !important;">${qReply[i].replies[j]}</div></button>`
+        //                     apiquickRepliesHtml += `<ul style="list-style-type: none;"><li><button type="button"  class="btn-quick .pmd-btn-fab apiquickRepliesPayload" data-apiquickRepliesPayload="${qReply[i].replies[j]}"><img src="avatar/image/${qReply[i].replies[j].replace(/ /g, '')}.svg" style="max-width:none !important;" class="img-responsive quick-reply-icon"></button></li><li><div class="quick-reply-button-text" style="padding-left: 5px !important;">${qReply[i].replies[j]}</div></li></ul>`
+        //                     //<br><div class="quick-reply-button-text" style="display:block !important;text-align:left">${qReply[i].replies[j]}</div>
+        //             }
+        //         } 
+        //             else if(qReply[i].replies.indexOf("Self Quotes") != -1) {
+        //                 apiquickRepliesHtml += `<div class="quick-replies-Cash">`
+        //                 for (let j = 0; j < qReply[i].replies.length; j++) {
+        //                         apiquickRepliesHtml +=  `<ul style="list-style-type: none;"> <button type="button"  class="btn btn-quick .pmd-btn-fab cashButton" data-cashButton="${qReply[i].replies[j]}"> <div class="cash-reply-button-text" style="display:block !important;text-align:left">${qReply[i].replies[j]}</div><img src="avatar/image/${qReply[i].replies[j].replace(/ /g, '')}.svg" class="img-responsive.quick-reply-icon-cash>
+        //                             "></button></ul>`
+                        
+        //                 }
+        //             }
+        //         else {
+        //             apiquickRepliesHtml += `<div class="quick-replies-buttons">`
+        //             for (let j = 0; j < qReply[i].replies.length; j++) {
+        //                 apiquickRepliesHtml += `<div class="quickrepliesApi-buttons">`
+        //                     apiquickRepliesHtml += `<button type="button"  class="btn btn-quick .pmd-btn-fab apiQuickreplybtnPayload" data-apiquickRepliesPayload="${qReply[i].replies[j]}">${qReply[i].replies[j]}</button>`
+        //             }
+        //         }
+        //     }
+        // }
+        // apiquickRepliesHtml += `</div>`;
   
-        apiquickRepliesHtml += `</div></li>`;
-        return apiquickRepliesHtml;
+        // apiquickRepliesHtml += `</div></li>`;
+        // return apiquickRepliesHtml;
     }
     var count =1;
     methods.fileUpload = (data) => {
