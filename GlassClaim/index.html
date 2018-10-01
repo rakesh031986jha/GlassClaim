@@ -208,14 +208,14 @@
        }
        reader.readAsDataURL(event.target.files[0]);
 
-       var event = { "name": "upload" };
+       this.options.event = { "name": "upload" };
             $.ajax({
                 type: "POST",
                 url: "https://api.api.ai/v1/query?v=20150910",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 headers: { 'Authorization': 'Bearer 2a7a1ea959934ecb94773d5a63969912', 'Content-Type': 'application/json'},
-                data: JSON.stringify(event),
+                data: JSON.stringify(this.options),
                 success: function (response) {
                     console.log("event fired and response is", response);
                     // for (let i in response.result.fulfillment.messages) {
