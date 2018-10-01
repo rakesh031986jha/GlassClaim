@@ -283,6 +283,14 @@ img.welcome-message-big{
   font-size: smaller;
 }
 
+.btn img {  
+  display: inline-block;
+  vertical-align: middle;
+  background: #f00;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 .custom-infocard {
     border-radius: 15px;
     padding: 0px 10px;
