@@ -205,14 +205,14 @@
         output.src = URL.createObjectURL(event.target.files[0]);
         
         //fireEvent(eventArgs) {
-            this.options.event = { "name": "upload" };
+            var event = { "name": "upload" };
             $.ajax({
                 type: "POST",
-                url: config.chatServerURL + "query?v=20150910",
+                url: "https://api.dialogflow.com/v1/query?v=20150910",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 headers: { 'Authorization': 'Bearer ' + '2a7a1ea959934ecb94773d5a63969912', 'Content-Type': 'application/json'},
-                data: JSON.stringify(this.options),
+                data: JSON.stringify(event),
                 success: function (response) {
                     console.log("event fired and response is", response);
                     // for (let i in response.result.fulfillment.messages) {
