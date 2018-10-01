@@ -1158,6 +1158,7 @@ img.welcome-message-big{
   position: relative;
   overflow: hidden;
   display: inline-block;
+  padding-left: 20px;
 }
 
 .btn-upload {

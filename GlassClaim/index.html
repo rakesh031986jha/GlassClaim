@@ -201,8 +201,9 @@
     
         reader.onload = function(){
         var output = document.getElementById('output');
+        output.style.display = "block";
         output.src = URL.createObjectURL(event.target.files[0]);
-       
+        
       
       
       }
