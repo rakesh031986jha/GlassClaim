@@ -522,7 +522,8 @@ img.welcome-message-big{
 }
 
 .main-container {
-  width: 480px;
+  /*width: 480px;*/
+  width: 35%;
 }
 
 .pmd-btn-outline.btn-info {
