@@ -97,10 +97,10 @@ define(['jquery', 'settings', 'apiService', 'utils'], function ($, config, apiSe
                                 //msg_container.parent().remove();
                                 msg_container.append(html);
                                 utils.scrollSmoothToBottom($('div.chat-body'));
-                                setTimeout(() => {
-                                    msg_container.find("li:nth-last-child(2)").find("button").prop("disabled", true);
-                                    msg_container.find("li:nth-last-child(2)").find("a").prop("disabled", true);
-                                }, 2000)
+                                // setTimeout(() => {
+                                //     msg_container.find("li:nth-last-child(2)").find("button").prop("disabled", true);
+                                //     msg_container.find("li:nth-last-child(2)").find("a").prop("disabled", true);
+                                // }, 2000)
 
                             }
                         }
