@@ -12,7 +12,9 @@ define(['jquery', 'settings', 'apiService', 'utils'], function ($, config, apiSe
         var globalLpChat;
         var chatFinalTranscript = [];
         var chatRequest;
-        
+        var loadFile = function(event) {
+            alert("hi");
+        }
         function closeWin() {
             setTimeout(() => {
                 window.parent.document.getElementById('btn-send-message').click();
