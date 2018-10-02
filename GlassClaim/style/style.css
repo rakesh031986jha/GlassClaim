@@ -410,8 +410,10 @@ img.welcome-message-big{
  
  .quick-replies-buttons {
   /*text-align: center;*/
-  width: 100px;
-  height: 100px;
+  /* width: 100px;
+  height: 100px; */
+  /* width: 100px; */
+    /* height: 100px; */
   margin-bottom: 4%;
   margin-top : 3%;
   padding-left : 52px;
