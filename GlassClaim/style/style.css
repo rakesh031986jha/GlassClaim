@@ -523,7 +523,7 @@ img.welcome-message-big{
 }
 
 .list-group-item-quick-reply-space{
-  line-height: 1.4;
+  /* line-height: 1.4;
   font-family: Roboto;
   font-size : 11pt;
   color:#999999;
@@ -531,12 +531,26 @@ img.welcome-message-big{
   overflow-wrap: break-word;
   max-width: 100%;
   border-radius: 0px 10px 10px 10px;
-  /* display: inline-block; */
-  position: relative;
+  /* display: inline-block; --old--*/ 
+  /* position: relative;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.21), 0 6px 20px 0 rgba(0, 0, 0, 0);
   padding: 15px 10px;
   margin-right: 0px;
-  margin-left: 13px;
+  margin-left: 13px; */
+  line-height: 1.4;
+    font-family: Roboto;
+    font-size: 11pt;
+    color: #999999;
+    /* background-color: #e8f4f9; */
+    overflow-wrap: break-word;
+    max-width: 100%;
+    border-radius: 0px 10px 10px 10px;
+    display: inline-block;
+    position: relative;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.21), 0px 0px 2px 0px rgba(0, 0, 0, 0.21);
+    padding: 15px 10px;
+    margin-right: 0px;
+    margin-left: 13px;
 }
 
 .main-container {
