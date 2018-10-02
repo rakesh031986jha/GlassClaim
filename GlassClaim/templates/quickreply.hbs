@@ -11,9 +11,14 @@
         <div class="quick-replies-buttons">
         {{#each payload.facebook.quick_replies}} 
         {{#if payload}}
-        <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" 
+        {{#if payload.selected }}
+        <button type="button" class="btn btn-info" 
            data-quickRepliesPayload="{{payload}}">
                 {{title}}</button>
+                {{else}}
+        <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" 
+           data-quickRepliesPayload="{{payload}}">
+                {{title}}</button>{{/if}}
             {{else if url}}
             <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" 
             onClick="window.location.href='{{url}}'; 'height=400,width=600'">{{title}}</button>
