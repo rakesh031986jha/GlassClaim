@@ -82,7 +82,7 @@ img.welcome-message-big{
 
 
 .main-container{
-    background-color: #fff;
+    /*background-color: #fff;*/
     /*height:100%;*/
     height: 93%;
     overflow-y: hidden;
@@ -325,7 +325,8 @@ img.welcome-message-big{
 }
 
 .background-color-custom {
-  background-color: #f5f5f5;
+ /* background-color: #f5f5f5;*/
+ 
 }
 
 .custom-quick-reply-background {
