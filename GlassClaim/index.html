@@ -21,13 +21,41 @@
 
   <!--Animate css -->
   <link rel="stylesheet" href="style/animate.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+  function readImage(element) {
+    var file = element.files[0];
+    var reader = new FileReader();
+    reader.onloadend = function() {
+      $.ajax({
+        url: "https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/bbbcde13-3478-40b8-9ed3-3c12cb15d748/image?iterationId=aea1d336-562b-4df0-9008-f62cc1cc7963",
+        data: reader.result,
+        processData: false,
+        contentType: "application/octet-streama",
+        headers: {
+          'Prediction-key': '89480c97ae7f461cac92611f97e2e64c'
+        },
+        type: 'POST',
+        success: function(response) {
+          var result = response["predictions"];
+  
+          alert(result);
+        },
+        error: function(error) {
+          alert('error: ' + error);
+        }
+      });
+    }
+    reader.readAsArrayBuffer(file);
+  }
+  </script>
 
 </head>
 
 
 <body>
 
-
+<form>
 
   <div class="container-fluid main-container no-scroll-x">
 
@@ -191,11 +219,12 @@
         });
       });
     </script>
+    </form>
 </body>
 <script type="text/javascript" src="https://lpcdn.lpsnmedia.net/api/chat/public/lpChat.min.js"></script>
 <!-- <script src="https://glassclaim.herokuapp.com/js/src/apiService.js"></script> -->
 <script>
-   require(['jquery'], function ($) {
+  /* require(['jquery'], function ($) {
             require(['bootstrap', 'apiService', 'utils', 'settings'], function (bootstrap, apiService, utils, settings) {
   var loadFile = function(event) {
 //     function guid() {
@@ -294,7 +323,7 @@ processor.askBot('upload', 'upload', function (error, html) {
      
     // };
             });
-          });
+          });*/
   </script>
 
 </html>
