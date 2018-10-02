@@ -131,7 +131,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                             for (let i in response.result.fulfillment.messages) {
                                 if (response.result.fulfillment.messages[i] && response.result.fulfillment.messages[i].hasOwnProperty('type')) {
                                     if (response.result.fulfillment.messages[i].type == 0 && response.result.fulfillment.messages[i].speech != "") {
-                                        if (response.result.action == 'upload_image') {
+                                        if (response.result.action == 'input.date') {
                                             let cardHTML = cards({
                                                 "payload": response.result.fulfillment.messages[i].speech,
                                                 "senderName": config.botTitle,
