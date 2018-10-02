@@ -11,7 +11,7 @@
         <div class="quick-replies-buttons">
         {{#each payload.facebook.quick_replies}} 
         {{#if payload}}
-        {{#if payload.selected }}
+        {{#if selected }}
         <button type="button" class="btn btn-info" 
            data-quickRepliesPayload="{{payload}}">
                 {{title}}</button>
