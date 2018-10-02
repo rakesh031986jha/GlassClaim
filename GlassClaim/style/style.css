@@ -416,7 +416,7 @@ img.welcome-message-big{
     /* height: 100px; */
   margin-bottom: 4%;
   margin-top : 3%;
-  padding-left : 52px;
+  /*padding-left : 52px;*/
  }
  .quick-reply-button-text {
   display : block;
@@ -511,8 +511,8 @@ img.welcome-message-big{
 }
 
 .quick-replies-buttons {
-  text-align: justify; /* For Edge */
-  text-align-last: justify;
+  /* text-align: justify; *//* For Edge */
+  /*text-align-last: justify; */
   margin-bottom: 14px;
 }
 
