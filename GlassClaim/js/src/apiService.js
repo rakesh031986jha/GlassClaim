@@ -44,7 +44,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
                     beforeSend: function () {
-                        msg_container.parent().append(`<img class="loading-gif-typing"src="/images/ellipsis.gif"  style="text-align:left;"  />`)
+                        msg_container.parent().append(`<img class="loading-gif-typing"src="/images/ellipsis.gif"  style="text-align:left; width: 69px;"  />`)
                     },
                     data: JSON.stringify(this.options),
                     success: function (response) {
