@@ -37,8 +37,7 @@
         },
         type: 'POST',
         success: function(response) {
-          var result = response["predictions"];
-  
+          var result = response["predictions"][0].tagName;
           alert(result);
         },
         error: function(error) {
