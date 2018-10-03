@@ -48,7 +48,7 @@
         type: 'POST',
         success: function(response) {
           var glassResult = response["predictions"][0].tagName; 
-          alert(glassResult); 
+          
       $.ajax({
         url: "https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/a5f70573-9fd1-470d-9ebb-bc5e69bb00a8/image?iterationId=9feb5eb3-2e44-46ca-a134-7e9cae8a4188",
         data: reader.result,
@@ -67,8 +67,8 @@
                     query: "upload "+result+" "+glassResult
                     
                 };
-               ;
-               alert(JSON.stringify(options));
+               
+               
           $.ajax({
                     type: "POST",
                     url: "/webhook",
@@ -142,19 +142,19 @@ setTimeout(() => {
         }, 500);
                     },
                     error: function (err) {
-                        alert(JSON.stringify(err));
+                      
                       
                     }
                 });
-          alert(result);
+          console.log(result);
         },
         error: function(error) {
-          alert('error: ' + error);
+          console.log('error: ' + error);
         }
       });
     },
         error: function(error) {
-          alert('error: ' + error);
+          aleconsole.logrt('error: ' + error);
         }
     });
     }
