@@ -26,7 +26,18 @@
   function readImage(element) {
     var file = element.files[0];
     var reader = new FileReader();
-    reader.onloadend = function() {
+   
+
+    reader.onloadend = function(e) {
+      let imgid=$("ul#msg_container li").find("img.output-image-upload").last().attr("id")
+      $("img#"+imgid).attr('src', window.URL.createObjectURL(element.files[0]));
+      $("img#"+imgid).show();
+      setTimeout(() => {
+       let element= $("div.chat-body")
+            var height = element[0].scrollHeight;
+            element.scrollTop(height);
+        }, 500);
+         
       $.ajax({
         url: "https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/bbbcde13-3478-40b8-9ed3-3c12cb15d748/image?iterationId=aea1d336-562b-4df0-9008-f62cc1cc7963",
         data: reader.result,
@@ -38,28 +49,88 @@
         type: 'POST',
         success: function(response) {
           var result = response["predictions"][0].tagName;
-          let uuid = !localStorage.getItem('uuid') ? localStorage.setItem('uuid', uuidv1()) : localStorage.getItem('uuid');
+          let uuid = localStorage.getItem('uuid');
           let options = {
                     sessionId: uuid,
                     lang: "en",
-                    query: "Utterance for upload is "+result
+                    query: "Upload"
                 };
                ;
+               alert(JSON.stringify(options));
           $.ajax({
                     type: "POST",
                     url: "/webhook",
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
-                    beforeSend: function () {
-                        msg_container.parent().append(`<img class="loading-gif-typing"src="/images/ellipsis.gif"  style="text-align:left; width: 69px;"  />`)
-                    },
-                    data: JSON.stringify(this.options),
-                   success: function (response) {
-                     alert(JSON.stringify(response));
+                    data: JSON.stringify(options),
+                    success: function (response) {
+                   let msg_container=$("ul#msg_container");
+                   let imgid=$("ul#msg_container li").find("img.output-image-upload").last().attr("id")
+                   msg_container.append(`<li class="list-group-item background-color-custom">
+    <div class="media-body animated fadeInLeft">
+   
+        </div>
+        
+        
+                  <table border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+        <td style="vertical-align:top;"><img width="40" height="40" class="bot-logo-image" style="border:none;"></td><td class="list-group-item-quick-reply-space"><p>Can you validate the type of window? You can select another one if the suggested window type is not correct</p>
+        <div class="quick-replies-buttons">
+        <button type="button" class="btn btn-info QuickreplybtnPayload" data-quickrepliespayload="Single Hung">
+                Single Hung</button>
+
+         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Double Hung Windows">
+                Double Hung Windows</button>
+         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Arched Windows">
+                Arched Windows</button>
+         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Bay Windows">
+                Bay Windows</button>
+         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Bow Windows">
+                Bow Windows</button>
+         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Casement Windows">
+                Casement Windows</button>
+         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Egress Windows">
+                Egress Windows</button>
+         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Garden Windows">
+                Garden Windows</button>
+         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Glass Block Windows">
+                Glass Block Windows</button>
+         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Hopper Windows">
+                Hopper Windows</button>
+         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Jalousie Windows">
+                Jalousie Windows</button>
+         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Picture Windows">
+                Picture Windows</button>
+         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Round Circle Windows">
+                Round Circle Windows</button>
+         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Skylight Windows">
+                Skylight Windows</button>
+         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Sliding Windows">
+                Sliding Windows</button>
+         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Storm Windows">
+                Storm Windows</button>
+         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Transom Windows">
+                Transom Windows</button>
+ 
+        </div>
+        </td></tr>
+        </tbody></table>
+          
+        <p class="bot-res-timestamp-qr">
+            <small>
+                <img style="border-radius:50%;border:2px solid white;">October 3, 10:34 am</small>
+        </p>
+    
+</li>`)
+setTimeout(() => {
+       let element= $("div.chat-body")
+            var height = element[0].scrollHeight;
+            element.scrollTop(height);
+        }, 500);
                     },
                     error: function (err) {
                         alert(JSON.stringify(err));
-                        callback("Internal Server Error", null);
+                      
                     }
                 });
           alert(result);
