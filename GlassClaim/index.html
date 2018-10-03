@@ -61,7 +61,7 @@
         success: function(response) {
           var result = response["predictions"][0].tagName;
           var array_button = ['Single Hung','Double Hung Windows','Arched Windows','Bay Windows','Bow Windows','Casement Windows','Egress Windows','Garden Windows','Glass Block Windows','Hopper Windows','Jalousie Windows','Picture Windows','Round Circle Windows','Skylight Windows','Sliding Windows','Storm Windows','Transom Windows'];
-          var button_ini;
+          var button_ini = '';
           console.log('button_ini 1',button_ini); 
           array_button.forEach( function(button){
             if(result != button)
