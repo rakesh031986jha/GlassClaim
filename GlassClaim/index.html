@@ -39,7 +39,7 @@
         }, 500);
          
       $.ajax({
-        url: "https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/bbbcde13-3478-40b8-9ed3-3c12cb15d748/image?iterationId=aea1d336-562b-4df0-9008-f62cc1cc7963",
+        url: "https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/a5f70573-9fd1-470d-9ebb-bc5e69bb00a8/image?iterationId=9feb5eb3-2e44-46ca-a134-7e9cae8a4188",
         data: reader.result,
         processData: false,
         contentType: "application/octet-streama",
@@ -53,7 +53,8 @@
           let options = {
                     sessionId: uuid,
                     lang: "en",
-                    query: "Upload"
+                    query: "upload "+result
+                    
                 };
                ;
                alert(JSON.stringify(options));
@@ -64,6 +65,7 @@
                     dataType: "json",
                     data: JSON.stringify(options),
                     success: function (response) {
+                   console.log('Param resp', response)   
                    let msg_container=$("ul#msg_container");
                    let imgid=$("ul#msg_container li").find("img.output-image-upload").last().attr("id")
                    msg_container.append(`<li class="list-group-item background-color-custom">
@@ -76,8 +78,8 @@
         <tbody><tr>
         <td style="vertical-align:top;"><img width="40" height="40" class="bot-logo-image" style="border:none;"></td><td class="list-group-item-quick-reply-space"><p>Can you validate the type of window? You can select another one if the suggested window type is not correct</p>
         <div class="quick-replies-buttons">
-        <button type="button" class="btn btn-info QuickreplybtnPayload" data-quickrepliespayload="Single Hung">
-                Single Hung</button>
+        <button type="button" class="btn btn-info QuickreplybtnPayload" data-quickrepliespayload="Single Hung Windows">
+                Single Hung Windows</button>
 
          <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Double Hung Windows">
                 Double Hung Windows</button>
