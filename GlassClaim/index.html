@@ -60,9 +60,9 @@
         type: 'POST',
         success: function(response) {
           var result = response["predictions"][0].tagName;
-          var array_button = {'Single Hung','Double Hung Windows','Arched Windows','Bay Windows','Bow Windows','Casement Windows','Egress Windows','Garden Windows','Glass Block Windows','Hopper Windows','Jalousie Windows','Picture Windows','Round Circle Windows','Skylight Windows','Sliding Windows','Storm Windows','Transom Windows'};
+          var array_button = ['Single Hung','Double Hung Windows','Arched Windows','Bay Windows','Bow Windows','Casement Windows','Egress Windows','Garden Windows','Glass Block Windows','Hopper Windows','Jalousie Windows','Picture Windows','Round Circle Windows','Skylight Windows','Sliding Windows','Storm Windows','Transom Windows'];
           var button_ini;
-          array_button.foreach( function(button){
+          array_button.forEach( function(button){
             if(result != button)
               button_ini += '<button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="'+button+'">'+button+'</button>'
             else 
