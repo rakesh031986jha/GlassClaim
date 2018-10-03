@@ -37,9 +37,20 @@
             var height = element[0].scrollHeight;
             element.scrollTop(height);
         }, 500);
-         
-      $.ajax({
+        $.ajax({
         url: "https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/bbbcde13-3478-40b8-9ed3-3c12cb15d748/image?iterationId=aea1d336-562b-4df0-9008-f62cc1cc7963",
+        data: reader.result,
+        processData: false,
+        contentType: "application/octet-streama",
+        headers: {
+          'Prediction-key': '89480c97ae7f461cac92611f97e2e64c'
+        },
+        type: 'POST',
+        success: function(response) {
+          var glassResult = response["predictions"][0].tagName; 
+          alert(glassResult); 
+      $.ajax({
+        url: "https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/a5f70573-9fd1-470d-9ebb-bc5e69bb00a8/image?iterationId=9feb5eb3-2e44-46ca-a134-7e9cae8a4188",
         data: reader.result,
         processData: false,
         contentType: "application/octet-streama",
@@ -63,7 +74,8 @@
           let options = {
                     sessionId: uuid,
                     lang: "en",
-                    query: "Upload"
+                    query: "upload "+result+" "+glassResult
+                    
                 };
                ;
                alert(JSON.stringify(options));
@@ -74,6 +86,7 @@
                     dataType: "json",
                     data: JSON.stringify(options),
                     success: function (response) {
+                   console.log('Param resp', response)   
                    let msg_container=$("ul#msg_container");
                    let imgid=$("ul#msg_container li").find("img.output-image-upload").last().attr("id")
                    msg_container.append(`<li class="list-group-item background-color-custom">
@@ -113,6 +126,11 @@ setTimeout(() => {
           alert('error: ' + error);
         }
       });
+    },
+        error: function(error) {
+          alert('error: ' + error);
+        }
+    });
     }
     reader.readAsArrayBuffer(file);
   }
@@ -140,7 +158,7 @@ setTimeout(() => {
     <div class="row" style="height: 77%;">
       <div class="chat-body" id="style-3" style="height: 580px !important"><!--removed pmd-z-depth-->
         <div class="chat-text-para col-xs-offset-4 col-xs-4 chat-welcome-message"><img class="welcome-message-big"/></div>
-        <h1 class="pmd-display3 hidden col-xs-12 welcome-message">Hello, I'am Macy!</h1>
+        <h1 class="pmd-display3 hidden col-xs-12 welcome-message">Hello, I'm Macy!</h1>
         <h1 class="pmd-display3 hidden col-xs-12 welcome-message-textWel">How can i help you ? <br>Enter your question below and I'll help you<br>find the  information you need</h1>
 
 
