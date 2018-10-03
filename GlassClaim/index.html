@@ -36,7 +36,7 @@
           'Prediction-key': '89480c97ae7f461cac92611f97e2e64c'
         },
         type: 'POST',
-        success: async function(response) {
+        success: function(response) {
           var result = response["predictions"][0].tagName;
           let uuid = !localStorage.getItem('uuid') ? localStorage.setItem('uuid', uuidv1()) : localStorage.getItem('uuid');
           let options = {
@@ -45,7 +45,7 @@
                     query: "Utterance for upload is "+result
                 };
                ;
-          await $.ajax({
+          $.ajax({
                     type: "POST",
                     url: "/webhook",
                     contentType: "application/json; charset=utf-8",
