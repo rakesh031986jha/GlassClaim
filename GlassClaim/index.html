@@ -36,8 +36,32 @@
           'Prediction-key': '89480c97ae7f461cac92611f97e2e64c'
         },
         type: 'POST',
-        success: function(response) {
+        success: async function(response) {
           var result = response["predictions"][0].tagName;
+          let uuid = !localStorage.getItem('uuid') ? localStorage.setItem('uuid', uuidv1()) : localStorage.getItem('uuid');
+          let options = {
+                    sessionId: uuid,
+                    lang: "en",
+                    query: "Utterance for upload is "+result
+                };
+               ;
+          await $.ajax({
+                    type: "POST",
+                    url: "/webhook",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    beforeSend: function () {
+                        msg_container.parent().append(`<img class="loading-gif-typing"src="/images/ellipsis.gif"  style="text-align:left; width: 69px;"  />`)
+                    },
+                    data: JSON.stringify(this.options),
+                   success: function (response) {
+                     alert(JSON.stringify(response));
+                    },
+                    error: function (err) {
+                        alert(JSON.stringify(err));
+                        callback("Internal Server Error", null);
+                    }
+                });
           alert(result);
         },
         error: function(error) {
