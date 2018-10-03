@@ -49,6 +49,16 @@
         type: 'POST',
         success: function(response) {
           var result = response["predictions"][0].tagName;
+          var array_button = ['Single Hung','Double Hung Windows','Arched Windows','Bay Windows','Bow Windows','Casement Windows','Egress Windows','Garden Windows','Glass Block Windows','Hopper Windows','Jalousie Windows','Picture Windows','Round Circle Windows','Skylight Windows','Sliding Windows','Storm Windows','Transom Windows'];
+          var button_ini;
+          array_button.foreach( function(button){
+            if(result != button)
+              button_ini += '<button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="'+button+'">'+button+'</button>'
+            else 
+              button_ini += '<button type="button" class="btn btn-info QuickreplybtnPayload" data-quickrepliespayload="'+button+'">'+button+'</button>'
+          })
+            
+          
           let uuid = localStorage.getItem('uuid');
           let options = {
                     sessionId: uuid,
@@ -75,43 +85,7 @@
                   <table border="0" cellpadding="0" cellspacing="0">
         <tbody><tr>
         <td style="vertical-align:top;"><img width="40" height="40" class="bot-logo-image" style="border:none;"></td><td class="list-group-item-quick-reply-space"><p>Can you validate the type of window? You can select another one if the suggested window type is not correct</p>
-        <div class="quick-replies-buttons">
-        <button type="button" class="btn btn-info QuickreplybtnPayload" data-quickrepliespayload="Single Hung">
-                Single Hung</button>
-
-         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Double Hung Windows">
-                Double Hung Windows</button>
-         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Arched Windows">
-                Arched Windows</button>
-         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Bay Windows">
-                Bay Windows</button>
-         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Bow Windows">
-                Bow Windows</button>
-         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Casement Windows">
-                Casement Windows</button>
-         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Egress Windows">
-                Egress Windows</button>
-         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Garden Windows">
-                Garden Windows</button>
-         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Glass Block Windows">
-                Glass Block Windows</button>
-         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Hopper Windows">
-                Hopper Windows</button>
-         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Jalousie Windows">
-                Jalousie Windows</button>
-         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Picture Windows">
-                Picture Windows</button>
-         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Round Circle Windows">
-                Round Circle Windows</button>
-         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Skylight Windows">
-                Skylight Windows</button>
-         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Sliding Windows">
-                Sliding Windows</button>
-         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Storm Windows">
-                Storm Windows</button>
-         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="Transom Windows">
-                Transom Windows</button>
- 
+        <div class="quick-replies-buttons">`+button_ini+`
         </div>
         </td></tr>
         </tbody></table>
