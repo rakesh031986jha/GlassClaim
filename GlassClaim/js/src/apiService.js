@@ -24,15 +24,15 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
             }
 
             userSays(userInput, callback) {
-                console.log('userInput == ',trim(userInput));
-                if(trim(userInput) == 'Auto'){
-                    callback(null, messageTpl.quickrepliesimg({
-                        "payload": userInput,
-                        "senderName": config.userTitle,
-                        "senderAvatar": config.userAvatar,
-                        "time": utils.currentTime(),
-                        "className": 'pull-right'
-                    }));
+                console.log('userInput == ',userInput.replace(/ /g,''));
+                if(userInput.replace(/ /g,'') == 'Auto'){
+                    // callback(null, messageTpl.quickrepliesimg({
+                    //     "payload": userInput,
+                    //     "senderName": config.userTitle,
+                    //     "senderAvatar": config.userAvatar,
+                    //     "time": utils.currentTime(),
+                    //     "className": 'pull-right'
+                    // }));
                     let cardHTML = cards({
                         "payload": [
                           {
