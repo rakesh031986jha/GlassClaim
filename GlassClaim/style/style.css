@@ -494,11 +494,12 @@ img.welcome-message-big{
 }
 .welcome-message-textWel{
   margin-top: 0px;
+  line-height: 1.4;
   font-family: Roboto !important;
-  color: #999999;
+  /*color: #999999;*/
   position: relative;
   font-size: 11pt;
-  font-weight: 300;
+  /*font-weight: 300;*/
 }
 .carousel-body {
   background-color: white;
