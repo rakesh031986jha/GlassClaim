@@ -24,14 +24,46 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
             }
 
             userSays(userInput, callback) {
-
-                callback(null, messageTpl.userplaintext({
-                    "payload": userInput,
-                    "senderName": config.userTitle,
-                    "senderAvatar": config.userAvatar,
-                    "time": utils.currentTime(),
-                    "className": 'pull-right'
-                }));
+                if(userText == 'Auto'){
+                    callback(null, messageTpl.quickrepliesimg({
+                        "payload": userInput,
+                        "senderName": config.userTitle,
+                        "senderAvatar": config.userAvatar,
+                        "time": utils.currentTime(),
+                        "className": 'pull-right'
+                    }));
+                    let cardHTML = cards({
+                        "payload": [
+                          {
+                            "type":4,
+                            "platform":"facebook",
+                            "payload":{
+                              "facebook":{
+                                "text":"",
+                                "quick_replies_img":[{
+                                  "content_type":"text",
+                                  "title":"Auto",
+                                  "payload":"Auto"
+                                }]
+                              }
+                            }
+                          }
+                        ],
+                        "senderName": config.userTitle,
+                        "senderAvatar": config.userAvatar,
+                        "time": utils.currentTime(),
+                        "className": 'pull-right'
+                    }, "quickrepliesimg");
+                    callback(null, cardHTML);
+                } else {
+                    callback(null, messageTpl.userplaintext({
+                        "payload": userInput,
+                        "senderName": config.userTitle,
+                        "senderAvatar": config.userAvatar,
+                        "time": utils.currentTime(),
+                        "className": 'pull-right'
+                    }));
+                }
             }
             askBot(userInput, userText, callback) {
                 this.userSays(userText, callback);
