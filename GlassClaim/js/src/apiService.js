@@ -25,7 +25,9 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
 
             userSays(userInput, callback) {
                 console.log('userInput == ',userInput.replace(/ /g,''));
-                if(userInput.replace(/ /g,'') == 'Auto'){
+                var str = userInput.replace(/\r?\n|\r/g,'')
+                str = str.replace(/ /g,'')
+                if(str == 'Auto'){
                     // callback(null, messageTpl.quickrepliesimg({
                     //     "payload": userInput,
                     //     "senderName": config.userTitle,
