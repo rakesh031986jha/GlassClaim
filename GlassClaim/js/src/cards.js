@@ -26,6 +26,10 @@ define(['messageTemplates', 'uuid'], function (messageTpl, uuidv1) {
                 console.log(JSON.stringify(this.data));
                 return messageTpl.card(this.data);
             }
+            if (this.responseType == "cardright") {
+                console.log(JSON.stringify(this.data));
+                return messageTpl.cardright(this.data);
+            }
             //Return Carousel Response Type Payload
             if (this.responseType == "carousel") {
                 return messageTpl.carousel(this.data, uuidv1());
