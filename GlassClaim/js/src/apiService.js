@@ -26,7 +26,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
             userSays(userInput, callback) {
                 console.log('userInput == ',userInput.replace(/ /g,''));
                 var str = userInput.replace(/\r?\n|\r/g,'')
-                var style;
+                var style = '';
                 str = str.replace(/ /g,'')
                 if(str == 'Auto' || str == 'Home' || str == 'Business'){
                     // callback(null, messageTpl.quickrepliesimg({
