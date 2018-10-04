@@ -24,8 +24,8 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
             }
 
             userSays(userInput, callback) {
-                console.log('userInput == ',userInput);
-                if(userInput == 'Auto'){
+                console.log('userInput == ',trim(userInput));
+                if(trim(userInput) == 'Auto'){
                     callback(null, messageTpl.quickrepliesimg({
                         "payload": userInput,
                         "senderName": config.userTitle,
