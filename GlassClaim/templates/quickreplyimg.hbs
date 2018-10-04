@@ -15,8 +15,13 @@
         <div class="quick-replies-buttons" style="display:contents">
         {{#each payload.facebook.quick_replies_img}} 
         {{#if payload}}
+        {{#if disabled}}
+        <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload btn-img" 
+           data-quickRepliesPayload="{{payload}}" disabled>
+        {{else}}
         <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload btn-img" 
            data-quickRepliesPayload="{{payload}}">
+        {{/if}}
                 <img src="avatar/image/{{payload}}.svg" width="40" height="40"/><span>{{title}}</span></button>
             {{else if url}}
             <button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" 

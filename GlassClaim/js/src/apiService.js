@@ -46,7 +46,8 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                                 "quick_replies_img":[{
                                   "content_type":"text",
                                   "title":"Auto",
-                                  "payload":"Auto"
+                                  "payload":"Auto",
+                                  "disabled":true
                                 }]
                               }
                             }
