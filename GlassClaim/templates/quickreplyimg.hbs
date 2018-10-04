@@ -1,6 +1,10 @@
 <li class="list-group-item background-color-custom">
-    <div class="media-body animated fadeInLeft {{className}}">
-   
+    {{#if className}}
+    <div class="media-left pull-right animated fadeInRight">
+    {{else}}
+    <div class="media-body animated fadeInLeft">
+    {{/if}}
+       
         {{#each payload}} 
         {{#if_eq platform "facebook"}} 
         {{#key_value payload.facebook.quick_replies_img}}
