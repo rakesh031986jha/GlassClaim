@@ -35,7 +35,7 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                     //     "time": utils.currentTime(),
                     //     "className": 'pull-right'
                     // }));
-                    let cardHTML = cardright({
+                    let cardHTML = cards({
                         "payload": [
                           {
                             "type":4,

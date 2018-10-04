@@ -92,11 +92,6 @@ define(["utils", "settings", "handlebars", 'jquery'], function (utils, settings,
         let html = compiledTemplate(data);
         return html;
     }
-    methods.cardright = (data) => {
-        var compiledTemplate = handlebars.getTemplate('cardright');
-        let html = compiledTemplate(data);
-        return html;
-    }
     methods.quickreplies = (data) => {
         var compiledTemplate = handlebars.getTemplate('quickreply');
         let html = compiledTemplate(data);
