@@ -26,9 +26,8 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
             userSays(userInput, callback) {
                 console.log('userInput == ',userInput.replace(/ /g,''));
                 var str = userInput.replace(/\r?\n|\r/g,'')
-                var style = '';
                 str = str.replace(/ /g,'')
-                if(str == 'Auto' || str == 'Home' || str == 'Business'){
+                if(str == 'Auto'){
                     // callback(null, messageTpl.quickrepliesimg({
                     //     "payload": userInput,
                     //     "senderName": config.userTitle,
@@ -36,24 +35,6 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                     //     "time": utils.currentTime(),
                     //     "className": 'pull-right'
                     // }));
-                    style['Auto'] = [{
-                        "content_type":"text",
-                        "title":"Auto",
-                        "payload":"Auto",
-                        "disabled":true
-                      }];
-                    style['Home'] = [{
-                        "content_type":"text",
-                        "title":"Home",
-                        "payload":"Home",
-                        "disabled":true
-                      }];
-                    style['Business'] = [{
-                        "content_type":"text",
-                        "title":"Business",
-                        "payload":"BusinessOwners",
-                        "disabled":true
-                      }];
                     let cardHTML = cards({
                         "payload": [
                           {
@@ -62,7 +43,76 @@ define(['jquery', 'settings', 'utils', 'messageTemplates', 'cards', 'uuid'],
                             "payload":{
                               "facebook":{
                                 "text":"",
-                                "quick_replies_img":style[str]
+                                "quick_replies_img":[{
+                                  "content_type":"text",
+                                  "title":"Auto",
+                                  "payload":"Auto",
+                                  "disabled":true
+                                }]
+                              }
+                            }
+                          }
+                        ],
+                        "senderName": config.userTitle,
+                        "senderAvatar": config.userAvatar,
+                        "time": utils.currentTime(),
+                        "className": 'pull-right'
+                    }, "quickrepliesimg");
+                    callback(null, cardHTML);
+                } else if(str == 'Home'){
+                    // callback(null, messageTpl.quickrepliesimg({
+                    //     "payload": userInput,
+                    //     "senderName": config.userTitle,
+                    //     "senderAvatar": config.userAvatar,
+                    //     "time": utils.currentTime(),
+                    //     "className": 'pull-right'
+                    // }));
+                    let cardHTML = cards({
+                        "payload": [
+                          {
+                            "type":4,
+                            "platform":"facebook",
+                            "payload":{
+                              "facebook":{
+                                "text":"",
+                                "quick_replies_img":[{
+                                  "content_type":"text",
+                                  "title":"Home",
+                                  "payload":"Home",
+                                  "disabled":true
+                                }]
+                              }
+                            }
+                          }
+                        ],
+                        "senderName": config.userTitle,
+                        "senderAvatar": config.userAvatar,
+                        "time": utils.currentTime(),
+                        "className": 'pull-right'
+                    }, "quickrepliesimg");
+                    callback(null, cardHTML);
+                } else if(str == 'Business'){
+                    // callback(null, messageTpl.quickrepliesimg({
+                    //     "payload": userInput,
+                    //     "senderName": config.userTitle,
+                    //     "senderAvatar": config.userAvatar,
+                    //     "time": utils.currentTime(),
+                    //     "className": 'pull-right'
+                    // }));
+                    let cardHTML = cards({
+                        "payload": [
+                          {
+                            "type":4,
+                            "platform":"facebook",
+                            "payload":{
+                              "facebook":{
+                                "text":"",
+                                "quick_replies_img":[{
+                                  "content_type":"text",
+                                  "title":"Business",
+                                  "payload":"BusinessOwners",
+                                  "disabled":true
+                                }]
                               }
                             }
                           }
