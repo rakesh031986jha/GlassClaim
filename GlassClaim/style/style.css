@@ -36,6 +36,8 @@ img.user-logo-image{
   background-image: url('../avatar/john.svg');
    background-size: 40px 40px;
 border-radius: 20px;
+padding: 0px 0px 38px 0px;
+    background-repeat: no-repeat;
 
 }
 
