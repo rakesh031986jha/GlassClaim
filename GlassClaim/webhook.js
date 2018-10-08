@@ -31,7 +31,7 @@ app.post("/webhook",async (req,res)=>{
   var options = {
     url: "https://api.dialogflow.com/v1/query?v=20150910",
     method: "POST",
-    headers: { 'Authorization': 'Bearer ' + '2a7a1ea959934ecb94773d5a63969912', 'Content-Type': 'application/json'},
+    headers: { 'Authorization': 'Bearer ' + '60da65e2782f4c1ab12a48a2f56cdc3d', 'Content-Type': 'application/json'},
     body: req.body,
     json: true
   };
