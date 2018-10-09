@@ -37,8 +37,27 @@ app.post("/webhook",async (req,res)=>{
   };
   await requestAPI(options, function (error, response, body) {
   console.log('1------------',body);
-   
+  
       
+  if (error) {
+    res.send({ error: "error in chat server api call" }).end();
+  }
+  else {
+			
+    if(body.result && body.result.action && body.result.action=='discount'){
+
+      body.result.fulfillment.messages[2].speech = '<a class="pdfClass" data-toggle="modal" data-target="#fundModal">Click here</a> to refer the discount chart for more details'
+      res.send(body).end();
+    } else if(body.result && body.result.action && body.result.action =="riskClass"){
+      
+      let riskClass = body.result.parameters && body.result.parameters.RiskClass ? body.result.parameters.RiskClass : null;
+      console.log('YEAH', riskClass, body.result.parameters);
+      res.send(body).end();
+    } 
+    else{
+      res.send(body).end();
+    }
+  }
              res.send(body);
       
   
