@@ -1,6 +1,6 @@
 {
   "name": "OptyChatBot",
-  "productName": "Optus ChatBot",
+  "productName": "GC ChatBot",
   "version": "2.0.0",
   "main": "webhook.js",
   "scripts": {
