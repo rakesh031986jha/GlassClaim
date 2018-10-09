@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+	<link rel="manifest" href="/manifest.json">
+  <title>Glass Claim Assistant</title>
+  <link rel="shortcut icon" href="./avatar/blank.ico" />
+  <link rel="stylesheet" href="style/bootstrap.min.css">
+
+  <!--Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Propeller css -->
+  <link href="style/propeller.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+
+  <!--Animate css -->
+  <link rel="stylesheet" href="style/animate.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+  function readImage(element) {
+    var file = element.files[0];
+    var reader = new FileReader();
+   
+
+    reader.onloadend = function(e) {
+      let imgid=$("ul#msg_container li").find("img.output-image-upload").last().attr("id")
+      $("img#"+imgid).attr('src', window.URL.createObjectURL(element.files[0]));
+      $("img#"+imgid).show();
+      setTimeout(() => {
+       let element= $("div.chat-body")
+            var height = element[0].scrollHeight;
+            element.scrollTop(height);
+        }, 500);
+        $.ajax({
+        url: "https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/bbbcde13-3478-40b8-9ed3-3c12cb15d748/image?iterationId=aea1d336-562b-4df0-9008-f62cc1cc7963",
+        data: reader.result,
+        processData: false,
+        contentType: "application/octet-streama",
+        headers: {
+          'Prediction-key': '89480c97ae7f461cac92611f97e2e64c'
+        },
+        type: 'POST',
+        success: function(response) {
+          var glassResult = response["predictions"][0].tagName; 
+          
+      $.ajax({
+        url: "https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/a5f70573-9fd1-470d-9ebb-bc5e69bb00a8/image?iterationId=9feb5eb3-2e44-46ca-a134-7e9cae8a4188",
+        data: reader.result,
+        processData: false,
+        contentType: "application/octet-streama",
+        headers: {
+          'Prediction-key': '89480c97ae7f461cac92611f97e2e64c'
+        },
+        type: 'POST',
+        success: function(response) {
+          var result = response["predictions"][0].tagName;
+          var array_button = ['Single Hung Windows','Double Hung Windows','Arched Windows','Bay Windows','Bow Windows','Casement Windows','Egress Windows','Garden Windows','Glass Block Windows','Hopper Windows','Jalousie Windows','Picture Windows','Round Circle Windows','Skylight Windows','Sliding Windows','Storm Windows','Transom Windows'];
+          var button_ini = '';
+          console.log('button_ini 1',button_ini); 
+          array_button.forEach( function(button){
+            if(result != button)
+              button_ini += '<button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="'+button+'">'+button+'</button>'
+            else 
+              button_ini += '<button type="button" class="btn btn-info QuickreplybtnPayload" data-quickrepliespayload="'+button+'">'+button+'</button>'
+          })
+           console.log('button_ini 2',button_ini); 
+          
+          let uuid = localStorage.getItem('uuid');
+          let options = {
+                    sessionId: uuid,
+                    lang: "en",
+                    query: "upload "+result+" "+glassResult
+                    
+                };
+               
+               
+          $.ajax({
+                    type: "POST",
+                    url: "/webhook",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    data: JSON.stringify(options),
+                    success: function (response) {
+                   console.log('Param resp', response)   
+                   let msg_container=$("ul#msg_container");
+                   let imgid=$("ul#msg_container li").find("img.output-image-upload").last().attr("id")
+                   console.log('button_ini 3',button_ini); 
+                   msg_container.append(`<li class="list-group-item background-color-custom">
+    <div class="media-body animated fadeInLeft">
+   
+        </div>
+        
+        
+                  <table border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+        <td style="vertical-align:top;"><img width="40" height="40" class="bot-logo-image" style="border:none;"></td><td class="list-group-item-quick-reply-space"><p>Can you validate the type of window? You can select another one if the suggested window type is not correct</p>
+        <div class="quick-replies-buttons">`+button_ini+`
+        </div>
+        </td></tr>
+        </tbody></table>
+          
+        <p class="bot-res-timestamp-qr">
+            <small>
+                <img style="border-radius:50%;border:2px solid white;">October 3, 10:34 am</small>
+        </p>
+    
+</li>`)
+setTimeout(() => {
+       let element= $("div.chat-body")
+            var height = element[0].scrollHeight;
+            element.scrollTop(height);
+        }, 500);
+                    },
+                    error: function (err) {
+                      
+                      
+                    }
+                });
+          console.log(result);
+        },
+        error: function(error) {
+          console.log('error: ' + error);
+        }
+      });
+    },
+        error: function(error) {
+          aleconsole.logrt('error: ' + error);
+        }
+    });
+    }
+    reader.readAsArrayBuffer(file);
+  }
+  </script>
+
+</head>
+
+
+<body>
+
+
+
+  <div class="container-fluid main-container no-scroll-x">
+
+    <div class="row header-popup">
+      <div class="pmd-card pmd-z-depth card-custom-view showheader" style="margin-bottom: 4px;">
+        <div class="pmd-card-body" style="margin:0px;">
+          <div class="table custom-size" style="margin:0px;">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="height: 77%;">
+      <div class="chat-body" id="style-3" style="height: 580px !important"><!--removed pmd-z-depth-->
+        <div class="chat-text-para col-xs-offset-4 col-xs-4 chat-welcome-message"><img class="welcome-message-big"/></div>
+        <h1 class="pmd-display3 hidden col-xs-12 welcome-message">Hello, I'm Macy!</h1>
+        <h1 class="pmd-display3 hidden col-xs-12 welcome-message-textWel">How can I help you today?<br>Enter your question below and I'll help you<br>find the information you need.</h1>
+
+
+        <div class="header-text-logo hidden" style="background-color: #0097d6;height: 80px; width:480px !important;padding-top: 5px; border-bottom:2px solid rgba(204, 204, 204, 0.59); position: fixed; z-index: 20000;">
+          <div class="col-xs-3" style="padding-top: 13px;width: 16% !important;">
+            <img src="./avatar/Macybig.svg" class="img-responsive" style="border-radius: 50%; padding-top: 0%; max-width: 48px;">
+          </div>
+          <div class="col-xs-6" style="font-size: 14pt;font-family: Roboto;color: #FFF;padding-left: 0px !important;padding-top: 10px !important; margin-left: 0px !important;">Hello, I'm Macy!<br><div style="font-size: 11pt;font-weight: 300;font-family: Roboto;color: #FFF;padding-left: 0px !important;/* padding-top: 0px !important; */">How can I help you today ?</div>
+          </div>
+          <!-- <div class="col-xs-1 col-lg-1 col-md-1" >
+            
+            <img src="avatar/maximize.svg" id="popup-WrapperMini" href="#" type="button" onclick="windowMin();" style="height: 24px; width: 24px; margin-left: 40px;margin-top: 20px;">
+    </div>
+    
+            <div class="col-xs-1 col-lg-1 col-md-1">
+            <img src="avatar/close.svg" id="popup-WrapperClose" href="#" type="button" onclick="windowClose();" style="height: 24px; width: 24px; margin-left: 51px ;margin-top: 20px;">
+    </div>  -->
+        </div>
+      
+
+        <ul id="msg_container" class="list-group pmd-list pmd-card-list hidden background-color-custom" style="margin-top: 82px;"></ul>
+        
+      </div>
+    </div>
+
+   
+
+    <div class="row"style="height: 90px !important; width:480px ! important">
+      <div class="col-xs-12" style="margin-top: 10px; height: 90px !important;">
+        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+          <div class="input-group">
+           
+            <label class="control-label">Write your message here</label>
+            <textarea style="height:auto;resize: none;" rows="2" id="btn-input" required class="form-control" maxlength="250"></textarea>
+            <div class="input-group-addon">
+              <button style="margin-left: 0px; width: 26px; min-width: 10px" data-container="body" data-trigger="click" data-toggle="popover" data-placement="top" data-content="<h1 class='popup-msgbox' style='cursor:pointer;padding:0;margin:0'><span onclick='showmesgtext(this);return false;'  class='laughter' style='margin-right:3px;'>&#128516;</span><span  onclick='showmesgtext(this);return false;' class='winking'  style='margin-right:3px;'>&#128521;</span><span onclick='showmesgtext(this);return false;' class='delicious'  style='margin-right:3px;'>&#128523;</span><span onclick='showmesgtext(this);return false;' class='heart-shaped' style='margin-right:3px;' >&#128525;</span><span onclick='showmesgtext(this);return false;' style='margin-right:3px;' class='crying'>&#128546;</span><span onclick='showmesgtext(this);return false;' style='margin-right:3px;' class='angry'>&#128544;</span></h1>"
+                  data-html="true" class="emoji-message btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary" type="button" id="emojiPicker">
+                          <img src="/images/smiliy.png" width="24" height="24">
+                </button>
+            </div>
+            <div class="input-group-addon">
+
+              <div class="menu" role="navigation">
+                <a id="btn-send-message" class="pmd-floating-action-btn btn btn-sm pmd-btn-fab" href="#"><!--removed pmd-btn-raised pmd-ripple-effect-->
+                              <span class="pmd-floating-hidden">Primary</span>
+                              <img src="/images/Send.svg" width="40" height="40">
+                            </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="row" style="height: 90px !important; width:480px !important" >
+        <div class="col-xs-12" style="font-size: x-small;color: darkgray;">
+         <span><p style="margin-left:10px;">© Powered by Hexaware Technologies</p></span>
+        </div>
+
+        
+
+
+        <div tabindex="-1" class="modal fade" id="center-dialog" style="display: none;" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content" style="border-radius:10px">
+              <div class="modal-header">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+             
+                <div class="pmd-modal-media"> <img id="modal-img-holder" width="1184" height="666" class="img-responsive" src="http://propeller.in/assets/images/profile-pic.png">
+                </div>
+               
+                <div class="pmd-modal-action" style="position: relative;text-align: right;">
+                  <a download="invoice_example.jpg" target="_blank" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary"
+                    id="modal-btndownload"> <i class="material-icons pmd-sm">file_download</i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+
+    </div>
+    <script data-main="js/require-setup" src="require.js"></script>
+<!-- <script src="/js/config"></script> -->
+    <script>
+      function bindJS() {
+        $('.chat-body').css('height', (window.innerHeight - 140) + 'px')
+        $('.main-container').css('opacity', '1');
+        //hide emoji popover on outside click
+        $(document).on('click', function (e) {
+          $('[data-toggle="popover"]').each(function () {
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+              if ($("#" + $(this).attr("aria-describedby") + ":visible").length) {
+                $(this).trigger('click')
+              }
+            }
+          });
+        });
+       
+        //triggered when modal is about to be shown
+        $('#center-dialog').on('show.bs.modal', function (e) {
+          $('#modal-img-holder').attr('src', $(e.relatedTarget).data('src'));
+          $('#modal-btndownload').attr('href', $(e.relatedTarget).data('src'));
+        
+        });
+        function checkSRC()
+          {
+            var elem = document.getElementById('img1');
+            alert("fileupload");
+            if(elem.getAttribute('src') == "")
+            {
+              alert("empty");
+            }
+            else
+            {
+              alert("HAS a value");
+            }
+          }
+          
+        document.getElementById("btn-input").focus();
+        
+
+        $(document.body).ready(function () {
+          var isMobile = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
+          if (isMobile) {
+            $("html").addClass("mobile-device");
+          } else {
+            $("html").addClass("desktop-device");
+          }
+
+     
+
+        });
+      }
+      require(['lib/jquery.min'], function () {
+        require(['lib/bootstrap.min'], function () {
+          require(['lib/propeller'], function () {
+            bindJS()
+          });
+        });
+      });
+    </script>
+    
+</body>
+<script type="text/javascript" src="https://lpcdn.lpsnmedia.net/api/chat/public/lpChat.min.js"></script>
+<!-- <script src="https://glassclaim.herokuapp.com/js/src/apiService.js"></script> -->
+<!-- <script>
+   //require(['jquery'], function ($) {
+            require(['jquery','bootstrap', 'apiService', 'utils', 'settings'], function ($, bootstrap, apiService, utils, settings) {
+  var loadFile = function(event) {
+//     function guid() {
+//   function s4() {
+//     return Math.floor((1 + Math.random()) * 0x10000)
+//       .toString(16)
+//       .substring(1);
+//   }
+//   return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+// }
+var processor = apiService();
+processor.askBot('upload', 'upload', function (error, html) {
+                        
+    console.log('html LE precheck -- ', html);
+    console.log('error LE check -- ', error);
+    if (error) {
+        alert(error); //change into some inline fancy display, show error in chat window.
+    }
+    if (html) {
+        console.log('html LE check -- ', html);
+        // if (html == "Liveengage") {
+        //     globalLpChat = true;
+        //     initDemo();
+        // } else {
+          var msg_container = $("ul#msg_container");
+            if (msg_container.hasClass('hidden')) { // can be optimimzed and removed from here
+                msg_container.siblings("h1").addClass('hidden');
+                msg_container.siblings("div.chat-text-para").addClass('hidden');
+                msg_container.siblings(".header-text-logo").removeClass('hidden');
+                msg_container.removeClass('hidden');
+
+            }
+            msg_container.parent().next().find("img").remove()
+            //msg_container.parent().remove();
+            msg_container.append(html);
+            utils.scrollSmoothToBottom($('div.chat-body'));
+            setTimeout(() => {
+                msg_container.find("li:nth-last-child(2)").find("button").prop("disabled", true);
+                msg_container.find("li:nth-last-child(2)").find("a").prop("disabled", true);
+            }, 2000)
+
+        // }
+    }
+});
+//     let uuid = !localStorage.getItem('uuid') ? localStorage.setItem('uuid', guid()) : localStorage.getItem('uuid');
+
+// this.options = {
+//     sessionId: uuid,
+//     lang: "en"
+// };
+       var reader = new FileReader();
+     
+         reader.onload = function(){
+           console.log(event);
+         var output = document.getElementById('output');
+         console.log(output);
+         output.style.display = "block";
+         output.src = URL.createObjectURL(event.target.files[0]);
+       }
+       reader.readAsDataURL(event.target.files[0]);
+
+      //  this.options.event = { "name": "upload" };
+      //       $.ajax({
+      //           type: "POST",
+      //           url: "https://api.api.ai/v1/query?v=20150910",
+      //           contentType: "application/json; charset=utf-8",
+      //           dataType: "json",
+      //           headers: { 'Authorization': 'Bearer 2a7a1ea959934ecb94773d5a63969912', 'Content-Type': 'application/json'},
+      //           data: JSON.stringify(this.options),
+      //           success: function (response) {
+      //               console.log("event fired and response is", response);
+      //               // for (let i in response.result.fulfillment.messages) {
+      //               //     if (response.result.fulfillment.messages[i].type == 0 && response.result.fulfillment.messages[i].speech != "") {
+      //               //         var msg_container = $("#iChatPopup").contents().find('body div.chat-body');
+      //               //         msg_container.append(response.result.fulfillment.messages[i].speech);
+      //               //         //utils.scrollSmoothToBottom($('div.chat-body'));
+      //               //     }
+      //               // }
+      //           }
+      //       });
+     };
+    //  var loadFile = function(event) {
+       
+    //   var reader = new FileReader();
+    
+    //     reader.onload = function(){
+    //     var output = document.getElementById('output');
+    //     output.style.display = "block";
+    //     output.src = URL.createObjectURL(event.target.files[0]);
+    //   }
+    //   reader.readAsDataURL(event.target.files[0]);  
+    //     //fireEvent(eventArgs) {
+            
+    //     //};
+      
+     
+    // };
+            });
+          //});
+  </script> -->
+
+</html>
