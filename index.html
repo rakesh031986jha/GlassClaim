@@ -60,7 +60,7 @@
         type: 'POST',
         success: function(response) {
           var result = response["predictions"][0].tagName;
-          var array_button = ['Single Hung Windows','Double Hung Windows','Arched Windows','Bay Windows','Bow Windows','Casement Windows','Egress Windows','Garden Windows','Glass Block Windows','Hopper Windows','Jalousie Windows','Picture Windows','Round Circle Windows','Skylight Windows','Sliding Windows','Storm Windows','Transom Windows'];
+          var array_button = ['Single Hung Windows','Double Hung Windows','Awning Window','Arched Windows','Bay Windows','Bow Windows','Casement Windows','Egress Windows','Garden Windows','Glass Block Windows','Hopper Windows','Jalousie Windows','Picture Windows','Round Circle Windows','Skylight Windows','Sliding Windows','Storm Windows','Transom Windows'];
           var button_ini = '';
           console.log('button_ini 1',button_ini); 
           array_button.forEach( function(button){
@@ -126,6 +126,69 @@ setTimeout(() => {
         },
         error: function(error) {
           console.log('error: ' + error);
+          let uuid = localStorage.getItem('uuid');
+          let options = {
+                    sessionId: uuid,
+                    lang: "en",
+                    query: "upload "+"Float Glass"+" "+"Double Hung Windows"
+                    
+                };
+               
+               
+          $.ajax({
+                    type: "POST",
+                    url: "/webhook",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    data: JSON.stringify(options),
+                    success: function (response) {
+                  // console.log('Param resp', respose) 
+                   var Windowsname = '';
+                   var randomWindows='Double Hung Windows';
+                   var array_button = ['Single Hung Windows','Double Hung Windows','Awning Window','Arched Windows','Bay Windows','Bow Windows','Casement Windows','Egress Windows','Garden Windows','Glass Block Windows','Hopper Windows','Jalousie Windows','Picture Windows','Round Circle Windows','Skylight Windows','Sliding Windows','Storm Windows','Transom Windows'];
+                   array_button.forEach( function(button){
+                   if(randomWindows != button)
+                   Windowsname += '<button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="'+button+'">'+button+'</button>'
+                   else 
+                   Windowsname += '<button type="button" class="btn btn-info QuickreplybtnPayload" data-quickrepliespayload="'+button+'">'+button+'</button>'
+                })
+                  
+                   
+                   let msg_container=$("ul#msg_container");
+                   let imgid=$("ul#msg_container li").find("img.output-image-upload").last().attr("id")
+                 //  console.log('button_ini 3',button_ini); 
+                   msg_container.append(`<li class="list-group-item background-color-custom">
+    <div class="media-body animated fadeInLeft">
+   
+        </div>
+        
+        
+                  <table border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+        <td style="vertical-align:top;"><img width="40" height="40" class="bot-logo-image" style="border:none;"></td><td class="list-group-item-quick-reply-space"><p>Can you validate the type of window? You can select another one if the suggested window type is not correct</p>
+        <div class="quick-replies-buttons">`+Windowsname+`
+        </div>
+        </td></tr>
+        </tbody></table>
+          
+        <p class="bot-res-timestamp-qr">
+            <small>
+                <img style="border-radius:50%;border:2px solid white;">October 3, 10:34 am</small>
+        </p>
+    
+</li>`)
+setTimeout(() => {
+       let element= $("div.chat-body")
+            var height = element[0].scrollHeight;
+            element.scrollTop(height);
+        }, 500);
+                    },
+                    error: function (err) {
+                      
+                      
+                    }
+                });
+
         }
       });
     },
@@ -149,7 +212,7 @@ setTimeout(() => {
                   // console.log('Param resp', respose) 
                    var Windowsname = '';
                    var randomWindows='Double Hung Windows';
-                   var array_button = ['Single Hung Windows','Double Hung Windows','Arched Windows','Bay Windows','Bow Windows','Casement Windows','Egress Windows','Garden Windows','Glass Block Windows','Hopper Windows','Jalousie Windows','Picture Windows','Round Circle Windows','Skylight Windows','Sliding Windows','Storm Windows','Transom Windows'];
+                   var array_button = ['Single Hung Windows','Double Hung Windows','Awning Window','Arched Windows','Bay Windows','Bow Windows','Casement Windows','Egress Windows','Garden Windows','Glass Block Windows','Hopper Windows','Jalousie Windows','Picture Windows','Round Circle Windows','Skylight Windows','Sliding Windows','Storm Windows','Transom Windows'];
                    array_button.forEach( function(button){
                    if(randomWindows != button)
                    Windowsname += '<button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="'+button+'">'+button+'</button>'
