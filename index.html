@@ -59,8 +59,9 @@
         },
         type: 'POST',
         success: function(response) {
+          console.log(response+"Rakeshjha");
           var result = response["predictions"][0].tagName;
-          var array_button = ['Single Hung Windows','Double Hung Windows','Awning Window','Arched Windows','Bay Windows','Bow Windows','Casement Windows','Egress Windows','Garden Windows','Glass Block Windows','Hopper Windows','Jalousie Windows','Picture Windows','Round Circle Windows','Skylight Windows','Sliding Windows','Storm Windows','Transom Windows'];
+          var array_button = ['Single Hung Windows','Double Hung Windows','Awning Windows','Arched Windows','Bay Windows','Bow Windows','Casement Windows','Egress Windows','Garden Windows','Glass Block Windows','Hopper Windows','Jalousie Windows','Picture Windows','Round Circle Windows','Skylight Windows','Sliding Windows','Storm Windows','Transom Windows'];
           var button_ini = '';
           console.log('button_ini 1',button_ini); 
           array_button.forEach( function(button){
@@ -145,7 +146,7 @@ setTimeout(() => {
                   // console.log('Param resp', respose) 
                    var Windowsname = '';
                    var randomWindows='Double Hung Windows';
-                   var array_button = ['Single Hung Windows','Double Hung Windows','Awning Window','Arched Windows','Bay Windows','Bow Windows','Casement Windows','Egress Windows','Garden Windows','Glass Block Windows','Hopper Windows','Jalousie Windows','Picture Windows','Round Circle Windows','Skylight Windows','Sliding Windows','Storm Windows','Transom Windows'];
+                   var array_button = ['Single Hung Windows','Double Hung Windows','Awning Windows','Arched Windows','Bay Windows','Bow Windows','Casement Windows','Egress Windows','Garden Windows','Glass Block Windows','Hopper Windows','Jalousie Windows','Picture Windows','Round Circle Windows','Skylight Windows','Sliding Windows','Storm Windows','Transom Windows'];
                    array_button.forEach( function(button){
                    if(randomWindows != button)
                    Windowsname += '<button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="'+button+'">'+button+'</button>'
@@ -212,7 +213,7 @@ setTimeout(() => {
                   // console.log('Param resp', respose) 
                    var Windowsname = '';
                    var randomWindows='Double Hung Windows';
-                   var array_button = ['Single Hung Windows','Double Hung Windows','Awning Window','Arched Windows','Bay Windows','Bow Windows','Casement Windows','Egress Windows','Garden Windows','Glass Block Windows','Hopper Windows','Jalousie Windows','Picture Windows','Round Circle Windows','Skylight Windows','Sliding Windows','Storm Windows','Transom Windows'];
+                   var array_button = ['Single Hung Windows','Double Hung Windows','Awning Windows','Arched Windows','Bay Windows','Bow Windows','Casement Windows','Egress Windows','Garden Windows','Glass Block Windows','Hopper Windows','Jalousie Windows','Picture Windows','Round Circle Windows','Skylight Windows','Sliding Windows','Storm Windows','Transom Windows'];
                    array_button.forEach( function(button){
                    if(randomWindows != button)
                    Windowsname += '<button type="button" class="btn pmd-btn-outline pmd-ripple-effect btn-info QuickreplybtnPayload" data-quickrepliespayload="'+button+'">'+button+'</button>'
