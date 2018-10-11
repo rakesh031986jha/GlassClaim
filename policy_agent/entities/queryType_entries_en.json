@@ -1,0 +1,32 @@
+[
+  {
+    "value": "Risk Class",
+    "synonyms": [
+      "Risk Class"
+    ]
+  },
+  {
+    "value": "Deductible",
+    "synonyms": [
+      "Deductible"
+    ]
+  },
+  {
+    "value": "Discount",
+    "synonyms": [
+      "Discount"
+    ]
+  },
+  {
+    "value": "Coverage",
+    "synonyms": [
+      "Coverage"
+    ]
+  },
+  {
+    "value": "Others",
+    "synonyms": [
+      "Others"
+    ]
+  }
+]

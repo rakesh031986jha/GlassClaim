@@ -1,0 +1,80 @@
+{
+  "id": "ec4a65dc-b214-41d5-8a64-36a7bc7d3711",
+  "name": "GlassSize_7",
+  "auto": true,
+  "contexts": [
+    "GlassType_6"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.GlassSize",
+      "affectedContexts": [
+        {
+          "name": "GlassSize_7",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "id": "abd89b33-5b7d-43aa-9b39-faf99354fd87",
+          "required": true,
+          "dataType": "@sys.number",
+          "name": "number1",
+          "value": "$number1",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Please Enter the Height"
+            }
+          ],
+          "isList": false
+        },
+        {
+          "id": "6bb2d7de-af4d-409e-860a-1783e29d1cde",
+          "required": true,
+          "dataType": "@sys.number",
+          "name": "number2",
+          "value": "$number2",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Please Enter the width"
+            }
+          ],
+          "isList": false
+        },
+        {
+          "id": "b0d019cd-ded0-4482-ad56-14b874ec47af",
+          "required": true,
+          "dataType": "@sys.number",
+          "name": "number3",
+          "value": "$number3",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Please enter the thickness"
+            }
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1538642926,
+  "fallbackIntent": false,
+  "events": []
+}

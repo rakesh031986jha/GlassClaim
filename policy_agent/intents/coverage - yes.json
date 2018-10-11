@@ -1,0 +1,29 @@
+{
+  "id": "c73cc9a5-31c3-4c02-a603-6b65a5afdf33",
+  "parentId": "f6116deb-63c7-4584-be9a-c1cc7a5bb986",
+  "rootParentId": "f6116deb-63c7-4584-be9a-c1cc7a5bb986",
+  "name": "coverage - yes",
+  "auto": true,
+  "contexts": [
+    "coverage-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "coverage.coverage-yes",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [],
+      "defaultResponsePlatforms": {
+        "facebook": false
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1539063564,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,37 @@
+{
+  "id": "1d291d37-f34c-4610-b756-969798c9f6a1",
+  "name": "ChooseBreakage",
+  "auto": true,
+  "contexts": [
+    "Claimhome"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.policy",
+      "affectedContexts": [
+        {
+          "name": "ChooseBreakage",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1539015623,
+  "fallbackIntent": false,
+  "events": []
+}

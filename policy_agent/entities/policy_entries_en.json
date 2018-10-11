@@ -1,0 +1,29 @@
+[
+  {
+    "value": "Home",
+    "synonyms": [
+      "Home",
+      "home"
+    ]
+  },
+  {
+    "value": "Businessowners",
+    "synonyms": [
+      "Businessowners",
+      "buisness"
+    ]
+  },
+  {
+    "value": "Auto",
+    "synonyms": [
+      "Auto",
+      "auto"
+    ]
+  },
+  {
+    "value": "Business",
+    "synonyms": [
+      "Business"
+    ]
+  }
+]

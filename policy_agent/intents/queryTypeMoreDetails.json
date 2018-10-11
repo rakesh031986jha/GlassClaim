@@ -1,0 +1,45 @@
+{
+  "id": "b19d601e-987c-44d9-abcf-530bfff124e3",
+  "parentId": "1d3c09c8-06c9-4d40-8ea6-89e8681f292c",
+  "rootParentId": "1d3c09c8-06c9-4d40-8ea6-89e8681f292c",
+  "name": "queryTypeMoreDetails",
+  "auto": true,
+  "contexts": [
+    "queryType-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "queryTypeMoreDetails",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "17ed38fe-059d-4116-af4d-8dc2a53e0929",
+          "required": true,
+          "dataType": "@queryType",
+          "name": "queryType",
+          "value": "$queryType",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "platform": "facebook",
+          "lang": "en",
+          "speech": "Excellent! Can you please specify your query on $queryType"
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "facebook": false
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1528442278,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,33 @@
+{
+  "id": "4117e40b-77f2-4ee5-80c7-e6b9b9fd0504",
+  "parentId": "d1bf74fe-32d9-4f05-9130-3308ecb5ab44",
+  "rootParentId": "d1bf74fe-32d9-4f05-9130-3308ecb5ab44",
+  "name": "riskClass - no",
+  "auto": true,
+  "contexts": [
+    "riskClass-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "riskClass.riskClass-no",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Okay! See you again 🙂"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1527060858,
+  "fallbackIntent": false,
+  "events": []
+}

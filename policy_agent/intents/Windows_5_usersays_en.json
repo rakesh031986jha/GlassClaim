@@ -1,0 +1,254 @@
+[
+  {
+    "id": "3c4a8817-bee7-41c4-bd45-b7497fe80698",
+    "data": [
+      {
+        "text": "Transom  Windows",
+        "alias": "Windows",
+        "meta": "@Windows",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032180
+  },
+  {
+    "id": "f1f061bb-b05c-4b2b-9b39-3979ec3c67d1",
+    "data": [
+      {
+        "text": "Storm Windows",
+        "alias": "Windows",
+        "meta": "@Windows",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538504199
+  },
+  {
+    "id": "82f37b28-944a-44ea-983b-677792b811e7",
+    "data": [
+      {
+        "text": "Sliding Windows",
+        "alias": "Windows",
+        "meta": "@Windows",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032180
+  },
+  {
+    "id": "bad646cf-cb82-441b-8152-dc231379d2a5",
+    "data": [
+      {
+        "text": "Skylight Windows",
+        "alias": "Windows",
+        "meta": "@Windows",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032180
+  },
+  {
+    "id": "54a2b09a-71a3-48f7-a589-a14d7f120a43",
+    "data": [
+      {
+        "text": "Round Circle Windows",
+        "alias": "Windows",
+        "meta": "@Windows",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032180
+  },
+  {
+    "id": "255ab558-d439-4c3a-9d7f-f2bc58210f00",
+    "data": [
+      {
+        "text": "Picture Windows",
+        "alias": "Windows",
+        "meta": "@Windows",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032180
+  },
+  {
+    "id": "744bb8b2-86da-41c9-8964-e14309e2272d",
+    "data": [
+      {
+        "text": "Jalousie Windows",
+        "alias": "Windows",
+        "meta": "@Windows",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032180
+  },
+  {
+    "id": "6b72d85d-5382-4bbe-94fe-6dba39030816",
+    "data": [
+      {
+        "text": "Hopper Windows",
+        "alias": "Windows",
+        "meta": "@Windows",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032180
+  },
+  {
+    "id": "3bc1e1ad-6974-4696-a675-823a5f03f03d",
+    "data": [
+      {
+        "text": "Glass Block Windows",
+        "alias": "Windows",
+        "meta": "@Windows",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032180
+  },
+  {
+    "id": "e749d8f4-e8ab-4dd7-b0ed-2592775caeec",
+    "data": [
+      {
+        "text": "Garden Windows",
+        "alias": "Windows",
+        "meta": "@Windows",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032180
+  },
+  {
+    "id": "3f368ff2-b9ce-47d1-8a69-a17ff7408114",
+    "data": [
+      {
+        "text": "Egress Windows",
+        "alias": "Windows",
+        "meta": "@Windows",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032735
+  },
+  {
+    "id": "de5e1bcf-a7e6-4576-a13b-0365baabc58a",
+    "data": [
+      {
+        "text": "Casement Windows",
+        "alias": "Windows",
+        "meta": "@Windows",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1538032735
+  },
+  {
+    "id": "553b9427-6ae4-48c4-a358-e6e5e66674c5",
+    "data": [
+      {
+        "text": "Bow Windows",
+        "alias": "Windows",
+        "meta": "@Windows",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032180
+  },
+  {
+    "id": "f7505593-3396-4d83-a8f6-3257265090d2",
+    "data": [
+      {
+        "text": "Bay Windows",
+        "alias": "Windows",
+        "meta": "@Windows",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032735
+  },
+  {
+    "id": "32496249-6c06-4ff0-a382-f883f9df75d5",
+    "data": [
+      {
+        "text": "Awning Windows",
+        "alias": "Windows",
+        "meta": "@Windows",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032180
+  },
+  {
+    "id": "06995fdd-5df8-4eac-bcd3-75f27c701904",
+    "data": [
+      {
+        "text": "Arched Windows",
+        "alias": "Windows",
+        "meta": "@Windows",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032735
+  },
+  {
+    "id": "068c0d67-ad45-4881-ab41-d6689bfdc930",
+    "data": [
+      {
+        "text": "Double Hung Windows",
+        "alias": "Windows",
+        "meta": "@Windows",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032180
+  },
+  {
+    "id": "fb7756a7-22d4-457b-9361-3ad144b59781",
+    "data": [
+      {
+        "text": "Single Hung Windows",
+        "alias": "Windows",
+        "meta": "@Windows",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1538552297
+  }
+]

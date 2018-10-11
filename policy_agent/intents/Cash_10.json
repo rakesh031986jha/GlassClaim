@@ -1,0 +1,60 @@
+{
+  "id": "f9b0aafa-20be-41a7-a85e-9b9bbfb092ce",
+  "name": "Cash_10",
+  "auto": true,
+  "contexts": [
+    "OtherOption_8"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.Cash_10",
+      "affectedContexts": [
+        {
+          "name": "Cash_10",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "id": "78eb9c10-7682-4436-b788-deeeae43e8f8",
+          "required": false,
+          "dataType": "@sys.currency-name",
+          "name": "currency-name",
+          "value": "$currency-name",
+          "isList": false
+        },
+        {
+          "id": "03997957-f2e3-4f57-866a-c17f381cec35",
+          "required": false,
+          "dataType": "@sys.duration",
+          "name": "duration",
+          "value": "$duration",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "platform": "facebook",
+          "lang": "en",
+          "speech": "Excellent! We\u0027ll initiate the wire transfer of this amount into your bank account, associated with our records, within 24 hours"
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1538655802,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,31 @@
+{
+  "id": "1d3c09c8-06c9-4d40-8ea6-89e8681f292c",
+  "name": "queryType",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.querytype",
+      "affectedContexts": [
+        {
+          "name": "queryType-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [],
+      "defaultResponsePlatforms": {
+        "facebook": false
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1539067353,
+  "fallbackIntent": false,
+  "events": []
+}

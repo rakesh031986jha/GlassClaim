@@ -1,0 +1,90 @@
+[
+  {
+    "id": "ecea15b3-d7ae-4669-9240-ac8d2ca89f4f",
+    "data": [
+      {
+        "text": "Deductible",
+        "alias": "queryType",
+        "meta": "@queryType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527769431
+  },
+  {
+    "id": "c015c312-62a9-4c62-b24b-e98a64384959",
+    "data": [
+      {
+        "text": "Discount",
+        "alias": "queryType",
+        "meta": "@queryType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527769431
+  },
+  {
+    "id": "a7d6fb06-3a49-46c3-9494-bfc97da7b0a6",
+    "data": [
+      {
+        "text": "Risk Class",
+        "alias": "queryType",
+        "meta": "@queryType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527769431
+  },
+  {
+    "id": "e1348298-e150-49bc-89c6-e85b5e8124b3",
+    "data": [
+      {
+        "text": "Others",
+        "alias": "queryType",
+        "meta": "@queryType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527769431
+  },
+  {
+    "id": "e15f475c-3eef-482e-a282-de59faf15ff3",
+    "data": [
+      {
+        "text": "Coverage",
+        "alias": "queryType",
+        "meta": "@queryType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527769431
+  },
+  {
+    "id": "493aeae1-0ee1-44f4-98d4-8fd0b8d26f9e",
+    "data": [
+      {
+        "text": "My query type is ",
+        "userDefined": false
+      },
+      {
+        "text": "Discount",
+        "alias": "queryType",
+        "meta": "@queryType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527769431
+  }
+]

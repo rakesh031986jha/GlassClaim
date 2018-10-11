@@ -1,0 +1,89 @@
+[
+  {
+    "id": "a40e9753-6dd8-4b14-9257-83e229801574",
+    "data": [
+      {
+        "text": "Is it possible to give ",
+        "userDefined": false
+      },
+      {
+        "text": "50%",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " discount",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1528887202
+  },
+  {
+    "id": "07f54388-009e-434f-8f26-122f5bb9a2bd",
+    "data": [
+      {
+        "text": " I can not able to apply ",
+        "userDefined": false
+      },
+      {
+        "text": "30%",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " discount",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1528887202
+  },
+  {
+    "id": "f3cef2fe-2809-40b6-8181-8711a2b5b988",
+    "data": [
+      {
+        "text": "I usually offer 20% discount to my customers in CPP policy however I am able to apply only 10% discount in this case",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1528887202
+  },
+  {
+    "id": "23e43c40-fd2f-4692-9eaf-22636889624f",
+    "data": [
+      {
+        "text": " I am able to apply only ",
+        "userDefined": false
+      },
+      {
+        "text": "10%",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " discount in this case",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1528887202
+  },
+  {
+    "id": "607cd91a-ab5e-48cd-8191-da304edf0da8",
+    "data": [
+      {
+        "text": "How much discount I can give for my customers",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1528887202
+  }
+]

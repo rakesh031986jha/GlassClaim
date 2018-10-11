@@ -1,0 +1,72 @@
+{
+  "id": "3f44cb06-5f77-443d-b6fc-9ac8d843da64",
+  "name": "Default Fallback Intent",
+  "auto": false,
+  "contexts": [
+    "glassClaim",
+    "Claim_2",
+    "date3",
+    "Damaged_glass_4",
+    "Windows_5"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.unknown",
+      "affectedContexts": [
+        {
+          "name": "glassClaim",
+          "parameters": {},
+          "lifespan": 0
+        },
+        {
+          "name": "Claim_2",
+          "parameters": {},
+          "lifespan": 0
+        },
+        {
+          "name": "date3",
+          "parameters": {},
+          "lifespan": 0
+        },
+        {
+          "name": "Damaged_glass_4",
+          "parameters": {},
+          "lifespan": 0
+        },
+        {
+          "name": "Windows_5",
+          "parameters": {},
+          "lifespan": 0
+        },
+        {
+          "name": "GlassType_6",
+          "parameters": {},
+          "lifespan": 0
+        },
+        {
+          "name": "GlassSize_7",
+          "parameters": {},
+          "lifespan": 0
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "platform": "facebook",
+          "lang": "en",
+          "speech": "I didn\u0027t understand. Can you try again?\nyou can start from begin"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 0,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1538625856,
+  "fallbackIntent": true,
+  "events": []
+}

@@ -1,0 +1,42 @@
+{
+  "id": "88362731-d66d-4d53-a845-dcf6aa781e42",
+  "parentId": "f403c0b3-69e6-4bb0-9a0f-9fde7c0ad860",
+  "rootParentId": "0ad95c2f-b15c-46de-ae2f-960b5634cbf5",
+  "name": "higherDeductible - yes - custom",
+  "auto": true,
+  "contexts": [
+    "higherDeductible-yes-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "higherDeductible.higherDeductible-yes.higherDeductible-yes-custom",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "c8bb6ad2-f773-41ec-91b5-91c02b4896e6",
+          "required": false,
+          "dataType": "@queryType",
+          "name": "queryType",
+          "value": "$queryType",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Excellent! Can you please specify your query on $queryType"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1528442260,
+  "fallbackIntent": false,
+  "events": []
+}

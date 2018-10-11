@@ -1,0 +1,52 @@
+{
+  "id": "0656af3e-231e-40c9-b8c7-d2067ebe9130",
+  "name": "Damaged_glass_4",
+  "auto": true,
+  "contexts": [
+    "date_3"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "upload_image",
+      "affectedContexts": [
+        {
+          "name": "Damaged_glass_4",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "id": "ef622f50-b3b7-41d8-b35b-6a4677dd1800",
+          "required": false,
+          "dataType": "@Windows",
+          "name": "WindowType",
+          "value": "$WindowType",
+          "isList": false
+        },
+        {
+          "id": "51b40ad3-a961-40a3-b59e-48c2c6b97709",
+          "required": false,
+          "dataType": "@GlassType",
+          "name": "ClaimGlassType",
+          "value": "$ClaimGlassType",
+          "isList": false
+        }
+      ],
+      "messages": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1538591401,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "upload"
+    }
+  ]
+}

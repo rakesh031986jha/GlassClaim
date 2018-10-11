@@ -1,0 +1,16 @@
+[
+  {
+    "id": "82772f11-8364-4110-b1d2-3f636f1b6ab5",
+    "data": [
+      {
+        "text": "Renewal",
+        "alias": "assitanceType",
+        "meta": "@assitanceType",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1539074842
+  }
+]

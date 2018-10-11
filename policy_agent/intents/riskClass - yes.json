@@ -1,0 +1,35 @@
+{
+  "id": "cbf11d73-73eb-4bf2-b703-c987936f102a",
+  "parentId": "d1bf74fe-32d9-4f05-9130-3308ecb5ab44",
+  "rootParentId": "d1bf74fe-32d9-4f05-9130-3308ecb5ab44",
+  "name": "riskClass - yes",
+  "auto": true,
+  "contexts": [
+    "riskClass-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "riskClass.riskClass-yes",
+      "affectedContexts": [
+        {
+          "name": "riskClass-yes-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [],
+      "defaultResponsePlatforms": {
+        "facebook": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1539062120,
+  "fallbackIntent": false,
+  "events": []
+}

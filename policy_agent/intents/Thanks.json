@@ -1,0 +1,60 @@
+{
+  "id": "19305a4b-6489-4777-af42-5b825ae8884d",
+  "name": "Thanks",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "Claim_2",
+          "parameters": {},
+          "lifespan": 0
+        },
+        {
+          "name": "date3",
+          "parameters": {},
+          "lifespan": 0
+        },
+        {
+          "name": "Damaged_glass_4",
+          "parameters": {},
+          "lifespan": 0
+        },
+        {
+          "name": "Windows_5",
+          "parameters": {},
+          "lifespan": 0
+        },
+        {
+          "name": "GlassType_6",
+          "parameters": {},
+          "lifespan": 0
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "platform": "facebook",
+          "lang": "en",
+          "speech": "Happy to help. Have a great day."
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1538507652,
+  "fallbackIntent": false,
+  "events": []
+}

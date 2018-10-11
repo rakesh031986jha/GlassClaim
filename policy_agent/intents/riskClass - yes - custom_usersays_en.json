@@ -1,0 +1,76 @@
+[
+  {
+    "id": "af659f51-f93f-4637-9cf8-99d7920072b1",
+    "data": [
+      {
+        "text": "Discount",
+        "alias": "queryType",
+        "meta": "@queryType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1528442137
+  },
+  {
+    "id": "d87ee9e1-2d78-48e1-bd8d-bf9513cfc5c5",
+    "data": [
+      {
+        "text": "Others",
+        "alias": "queryType",
+        "meta": "@queryType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1528442137
+  },
+  {
+    "id": "f90c68bd-ff7f-4b40-a18f-398da69a5883",
+    "data": [
+      {
+        "text": "My query type is ",
+        "userDefined": false
+      },
+      {
+        "text": "Discount",
+        "alias": "queryType",
+        "meta": "@queryType",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1528442137
+  },
+  {
+    "id": "037ca5ac-c56b-44e0-b921-3281ea9096bd",
+    "data": [
+      {
+        "text": "Risk Class",
+        "alias": "queryType",
+        "meta": "@queryType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1528442137
+  },
+  {
+    "id": "2ed0f436-9bb3-4785-b414-b15985559c0a",
+    "data": [
+      {
+        "text": "Coverage",
+        "alias": "queryType",
+        "meta": "@queryType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1528442137
+  }
+]

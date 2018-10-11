@@ -1,0 +1,52 @@
+{
+  "id": "eb5a36a0-7759-4563-9b00-404418ab6563",
+  "name": "GlassType_6",
+  "auto": true,
+  "contexts": [
+    "Windows_5"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.sizeOfglass",
+      "affectedContexts": [
+        {
+          "name": "GlassType_6",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "id": "3ab49aa2-32ba-43ba-b478-6bf9d10f5bd5",
+          "required": true,
+          "dataType": "@GlassType",
+          "name": "GlassType",
+          "value": "$GlassType",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Can you validate the type of glass?"
+            }
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1538507036,
+  "fallbackIntent": false,
+  "events": []
+}

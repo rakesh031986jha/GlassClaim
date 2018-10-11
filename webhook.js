@@ -7,10 +7,10 @@ var express = require('express'),
   session = require('express-session');
 const crypto = require('crypto');
 var router = express.Router();
-// Moment JS
+var config = require("./config"); 
+//var config=('src/setting.js')
 
-
-
+console.log(config.accessToken);
 
 var bodyParser = require('body-parser');
 var fs = require('fs');
@@ -21,17 +21,15 @@ app.use(session({
   key: 'opty'
 }));
 app.use(express.static(__dirname));
-// app.use(passport.initialize());
-// app.use(passport.session());
 app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
   extended: true
 }));
 
 app.post("/webhook",async (req,res)=>{
   var options = {
-    url: "https://api.dialogflow.com/v1/query?v=20150910",
+    url: config.chatServerURL,
     method: "POST",
-    headers: { 'Authorization': 'Bearer ' + '60da65e2782f4c1ab12a48a2f56cdc3d', 'Content-Type': 'application/json'},
+    headers: { 'Authorization': 'Bearer ' + config.accessToken, 'Content-Type': 'application/json'},
     body: req.body,
     json: true
   };
@@ -41,7 +39,7 @@ app.post("/webhook",async (req,res)=>{
      if(!error){
       
       if(body.result.action=='input.discount'){
-        console.log("Rakesh Jha");
+      
         body.result.fulfillment.messages[2].speech = '<a class="pdfClass" data-toggle="modal" data-target="#fundModal">Click here</a> to refer the discount chart for more details'
          res.send(body);
         }else if(body.result.action =="riskClass"){

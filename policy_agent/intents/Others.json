@@ -1,0 +1,43 @@
+{
+  "id": "e31d2427-1c89-4a9c-b023-0ab919dcf45c",
+  "name": "Others",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "others",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "337901aa-0960-439b-bae9-4593c8591afa",
+          "required": false,
+          "dataType": "@queryType",
+          "name": "queryType",
+          "value": "$queryType",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Ah Sorry !!!"
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "I am unable to help you on this. Click here to conect with a senior underwriter or you can call your Agency Manager \u003cb\u003eMr. John\u003c/b\u003e @ \u003cb\u003e732 313 4444\u003c/b\u003e"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1528804404,
+  "fallbackIntent": false,
+  "events": []
+}

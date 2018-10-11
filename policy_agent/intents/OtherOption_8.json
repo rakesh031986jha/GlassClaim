@@ -1,0 +1,39 @@
+{
+  "id": "132907f8-c2ae-4843-91d9-a4036524cc2c",
+  "name": "OtherOption_8",
+  "auto": true,
+  "contexts": [
+    "GlassSize_7"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "otherOption",
+      "affectedContexts": [
+        {
+          "name": "OtherOption_8",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "facebook": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1538653970,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "9e59f4e0-f3dd-473b-a8fa-a1597ffa1ab6",
+    "data": [
+      {
+        "text": "Policy Change",
+        "alias": "assitanceType",
+        "meta": "@assitanceType",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1539074821
+  }
+]

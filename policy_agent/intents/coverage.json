@@ -1,0 +1,31 @@
+{
+  "id": "f6116deb-63c7-4584-be9a-c1cc7a5bb986",
+  "name": "coverage",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "selectDeductible",
+      "affectedContexts": [
+        {
+          "name": "coverage-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [],
+      "defaultResponsePlatforms": {
+        "facebook": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1539063465,
+  "fallbackIntent": false,
+  "events": []
+}

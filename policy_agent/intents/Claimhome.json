@@ -1,0 +1,45 @@
+{
+  "id": "31536b04-01df-41cd-9c62-56bad77fd9c1",
+  "name": "Claimhome",
+  "auto": true,
+  "contexts": [
+    "ChooseClaim"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.Claim02",
+      "affectedContexts": [
+        {
+          "name": "Claimhome",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "id": "6e8127f7-5eb6-4830-ae3a-84c66d137a81",
+          "dataType": "@policy",
+          "name": "policy",
+          "value": "$policy",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1539015346,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,28 @@
+{
+  "id": "2fa5fe95-9f78-4b41-a8f3-576caca9e738",
+  "name": "sadSmiley",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "I am sorry to heart that 😪"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1528870558,
+  "fallbackIntent": false,
+  "events": []
+}

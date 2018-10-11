@@ -1,0 +1,39 @@
+{
+  "id": "16ce3e6b-d43b-405f-9a16-91b0f7254fbe",
+  "name": "Renewal",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.Renewal",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "04a96c55-33ca-4519-99a0-4294daf32d48",
+          "dataType": "@assitanceType",
+          "name": "assitanceType",
+          "value": "$assitanceType",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "facebook": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1539074842,
+  "fallbackIntent": false,
+  "events": []
+}

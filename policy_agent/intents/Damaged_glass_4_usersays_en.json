@@ -1,0 +1,530 @@
+[
+  {
+    "id": "64a3ebe9-48fb-48d5-b93b-c86b902e47e1",
+    "data": [
+      {
+        "text": "upload",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Egress Windows",
+        "alias": "WindowType",
+        "meta": "@Windows",
+        "userDefined": true
+      },
+      {
+        "text": "  ",
+        "userDefined": false
+      },
+      {
+        "text": "Float Glass",
+        "alias": "ClaimGlassType",
+        "meta": "@GlassType",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538554633
+  },
+  {
+    "id": "c6a31166-553d-4b42-b6ad-595be01387d5",
+    "data": [
+      {
+        "text": "upload",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Garden Windows",
+        "alias": "WindowType",
+        "meta": "@Windows",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Safety Laminated Glass",
+        "alias": "ClaimGlassType",
+        "meta": "@GlassType",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538554633
+  },
+  {
+    "id": "d12fed10-3ce5-4045-b46d-0deb9004671f",
+    "data": [
+      {
+        "text": "upload",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Glass Block Windows",
+        "alias": "WindowType",
+        "meta": "@Windows",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Obscured Glass",
+        "alias": "ClaimGlassType",
+        "meta": "@GlassType",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538555580
+  },
+  {
+    "id": "9e8833f2-4f68-459b-9fda-e54c4b736c7a",
+    "data": [
+      {
+        "text": "upload",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Hopper Windows",
+        "alias": "WindowType",
+        "meta": "@Windows",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Annealed Glass",
+        "alias": "ClaimGlassType",
+        "meta": "@GlassType",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538574281
+  },
+  {
+    "id": "ecd21702-3e96-48c5-86d5-35988ca4edf8",
+    "data": [
+      {
+        "text": "upload",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Jalousie Windows",
+        "alias": "WindowType",
+        "meta": "@Windows",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Tinted Glass",
+        "alias": "ClaimGlassType",
+        "meta": "@GlassType",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538554633
+  },
+  {
+    "id": "6654bd86-d566-488e-8445-e58a90a0672e",
+    "data": [
+      {
+        "text": "upload",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Picture Windows",
+        "alias": "WindowType",
+        "meta": "@Windows",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Tempered Glass",
+        "alias": "ClaimGlassType",
+        "meta": "@GlassType",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538554633
+  },
+  {
+    "id": "09b8cfaa-52e3-4c67-a10a-b03d19a91846",
+    "data": [
+      {
+        "text": "upload ",
+        "userDefined": false
+      },
+      {
+        "text": "Round Circle Windows",
+        "alias": "WindowType",
+        "meta": "@Windows",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Insulated Glass",
+        "alias": "ClaimGlassType",
+        "meta": "@GlassType",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538554633
+  },
+  {
+    "id": "ed8a9e48-70e8-4b40-8f19-07327a77eb6e",
+    "data": [
+      {
+        "text": "upload",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Skylight Windows",
+        "alias": "WindowType",
+        "meta": "@Windows",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Mirrored Glass",
+        "alias": "ClaimGlassType",
+        "meta": "@GlassType",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538554633
+  },
+  {
+    "id": "ececf13c-18fb-4650-8a6f-48d563075102",
+    "data": [
+      {
+        "text": "upload",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Sliding Windows",
+        "alias": "WindowType",
+        "meta": "@Windows",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Low-E Glass",
+        "alias": "ClaimGlassType",
+        "meta": "@GlassType",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538554633
+  },
+  {
+    "id": "7ac5e3ff-069a-4bbb-81d7-48549c303416",
+    "data": [
+      {
+        "text": "upload  ",
+        "userDefined": false
+      },
+      {
+        "text": "Storm Windows",
+        "alias": "WindowType",
+        "meta": "@Windows",
+        "userDefined": true
+      },
+      {
+        "text": "  ",
+        "userDefined": false
+      },
+      {
+        "text": "Heat Strengthened Glass",
+        "alias": "ClaimGlassType",
+        "meta": "@GlassType",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538554633
+  },
+  {
+    "id": "eb7128ff-9213-4421-adc7-b1bf06ccd237",
+    "data": [
+      {
+        "text": "upload",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Single Hung Windows",
+        "alias": "WindowType",
+        "meta": "@Windows",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538555298
+  },
+  {
+    "id": "59516506-c781-4a5d-b6eb-1541fbd6420e",
+    "data": [
+      {
+        "text": "upload",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Double Hung Windows",
+        "alias": "WindowType",
+        "meta": "@Windows",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538555298
+  },
+  {
+    "id": "4cfec3ff-f988-4b3d-9d3e-6900d2e43be7",
+    "data": [
+      {
+        "text": "upload",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Casement Windows",
+        "alias": "WindowType",
+        "meta": "@Windows",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538555298
+  },
+  {
+    "id": "fed68bb5-4006-4284-9b74-ffde2dccfca0",
+    "data": [
+      {
+        "text": "upload",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Awning Windows",
+        "alias": "WindowType",
+        "meta": "@Windows",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538555298
+  },
+  {
+    "id": "6bb70a91-648d-48bd-9db0-d7707cc779bc",
+    "data": [
+      {
+        "text": "upload",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Bay Windows",
+        "alias": "WindowType",
+        "meta": "@Windows",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538555298
+  },
+  {
+    "id": "31273a63-e064-4bfa-8258-b991fd5e45bd",
+    "data": [
+      {
+        "text": "upload",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Bow Windows",
+        "alias": "WindowType",
+        "meta": "@Windows",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1538555298
+  },
+  {
+    "id": "16b7221f-6526-42f4-a7e6-309fa235c63b",
+    "data": [
+      {
+        "text": "upload",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Transom Windows",
+        "alias": "WindowType",
+        "meta": "@Windows",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538554633
+  },
+  {
+    "id": "9c20b6c1-1a97-4ad0-abf5-072a00e714cf",
+    "data": [
+      {
+        "text": "upload",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548357
+  },
+  {
+    "id": "d3ce7374-5022-497c-84bd-b62d5ae4d948",
+    "data": [
+      {
+        "text": "uploaded",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548357
+  },
+  {
+    "id": "d66629f4-9064-4f53-8a40-655a99367384",
+    "data": [
+      {
+        "text": "John ",
+        "userDefined": false
+      },
+      {
+        "text": "uploads",
+        "meta": "@sys.ignore",
+        "userDefined": true
+      },
+      {
+        "text": " the image",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548357
+  }
+]

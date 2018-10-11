@@ -1,0 +1,38 @@
+{
+  "id": "1866bb38-e111-4689-b1a5-aa46f3b419d2",
+  "parentId": "0e3172e6-1eab-4fa9-83d4-3b2d4c2ea313",
+  "rootParentId": "a1f3056b-5b84-440e-98a7-dc3a9625ae79",
+  "name": "discount - yes - custom",
+  "auto": true,
+  "contexts": [
+    "discount-yes-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "discount.discount-yes.discount-yes-custom",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "2b649297-bc16-478d-83c5-fab6258f4b04",
+          "required": false,
+          "dataType": "@queryType",
+          "name": "queryType",
+          "value": "$queryType",
+          "isList": false
+        }
+      ],
+      "messages": [],
+      "defaultResponsePlatforms": {
+        "facebook": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1539060446,
+  "fallbackIntent": false,
+  "events": []
+}

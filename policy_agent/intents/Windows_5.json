@@ -1,0 +1,40 @@
+{
+  "id": "1b412e6c-ae60-4d23-98ba-b163c42bb489",
+  "name": "Windows_5",
+  "auto": true,
+  "contexts": [
+    "Damaged_glass_4"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.windows",
+      "affectedContexts": [
+        {
+          "name": "Windows_5",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "id": "cefbfa59-2749-4477-80c7-c0cbabc5a2b3",
+          "required": true,
+          "dataType": "@Windows",
+          "name": "Windows",
+          "value": "$Windows",
+          "isList": false
+        }
+      ],
+      "messages": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1538552297,
+  "fallbackIntent": false,
+  "events": []
+}

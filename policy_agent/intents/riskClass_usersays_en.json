@@ -1,0 +1,142 @@
+[
+  {
+    "id": "a145b2d8-aafb-4659-b098-520216ead54d",
+    "data": [
+      {
+        "text": "I have selected risk class as bakery manufacturing business while generating the quote for a ",
+        "userDefined": false
+      },
+      {
+        "text": "candy manufacturing",
+        "alias": "RiskClass",
+        "meta": "@RiskClass",
+        "userDefined": false
+      },
+      {
+        "text": " business. is it right",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1539061955
+  },
+  {
+    "id": "1868cda8-2899-4155-b92c-f926f9362164",
+    "data": [
+      {
+        "text": "I have selected Risk Class as \u0027Bakery Products Manufacturing\u0027 while generating the Quote for a ",
+        "userDefined": false
+      },
+      {
+        "text": "Candy Manufacturing",
+        "alias": "RiskClass",
+        "meta": "@RiskClass",
+        "userDefined": false
+      },
+      {
+        "text": " Business. Is it right?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 2,
+    "updated": 1528179671
+  },
+  {
+    "id": "bda9572c-3682-40c4-9592-65bb137e2eda",
+    "data": [
+      {
+        "text": "I have selected risk Class as Bakery Products Manufacturing while generating a Quote for ",
+        "userDefined": false
+      },
+      {
+        "text": "Candy Manufacturing",
+        "alias": "RiskClass",
+        "meta": "@RiskClass",
+        "userDefined": false
+      },
+      {
+        "text": " Business. Is it right?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 2,
+    "updated": 1528179671
+  },
+  {
+    "id": "3c6bad1e-3226-4bb4-a5e6-55a33174a129",
+    "data": [
+      {
+        "text": "I have selected Risk Class as \u0027Bakery Products Manufacturing\u0027 while generating the Quote for a Candy Manufacturing Business. Is it right?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1528179671
+  },
+  {
+    "id": "39d0fdfa-cba5-447a-8340-cc618c68509e",
+    "data": [
+      {
+        "text": "I have selected ",
+        "userDefined": false
+      },
+      {
+        "text": "risk Class",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " as Bakery Products Manufacturing while generating a Quote for ",
+        "userDefined": false
+      },
+      {
+        "text": "Candy Manufacturing",
+        "alias": "RiskClass",
+        "meta": "@RiskClass",
+        "userDefined": false
+      },
+      {
+        "text": " Business. Is it right?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1528179671
+  },
+  {
+    "id": "29446bb8-1307-4cb8-a929-2324aa8d0648",
+    "data": [
+      {
+        "text": "I have selected Risk Class as ",
+        "userDefined": false
+      },
+      {
+        "text": "Bakery Products Manufacturing",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " while generating the Quote for a ",
+        "userDefined": false
+      },
+      {
+        "text": "Candy Manufacturing Business",
+        "alias": "RiskClass",
+        "meta": "@RiskClass",
+        "userDefined": true
+      },
+      {
+        "text": ". Is it right?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 2,
+    "updated": 1539061955
+  }
+]

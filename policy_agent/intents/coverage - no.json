@@ -1,0 +1,33 @@
+{
+  "id": "7d3490a1-aa93-4246-84da-f34d0e181a8c",
+  "parentId": "f6116deb-63c7-4584-be9a-c1cc7a5bb986",
+  "rootParentId": "f6116deb-63c7-4584-be9a-c1cc7a5bb986",
+  "name": "coverage - no",
+  "auto": true,
+  "contexts": [
+    "coverage-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "coverage.coverage-no",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "See you again 🙂"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1527838176,
+  "fallbackIntent": false,
+  "events": []
+}

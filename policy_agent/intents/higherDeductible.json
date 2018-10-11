@@ -1,0 +1,60 @@
+{
+  "id": "0ad95c2f-b15c-46de-ae2f-960b5634cbf5",
+  "name": "higherDeductible",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "higherDeductible",
+      "affectedContexts": [
+        {
+          "name": "higherDeductible-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "platform": "facebook",
+          "lang": "en",
+          "speech": "Alright! First save your quote with standard deductible of 100 $. You can then chose the option of voluntary deductible and select the deductible amount from the options in the list and then generate premium"
+        },
+        {
+          "type": 0,
+          "platform": "facebook",
+          "lang": "en",
+          "speech": "Higher the deductible amount selected, lower will be the premium amount"
+        },
+        {
+          "type": 0,
+          "platform": "facebook",
+          "lang": "en",
+          "speech": "Is there anything else I can help you with?"
+        },
+        {
+          "type": 2,
+          "platform": "facebook",
+          "lang": "en",
+          "title": "",
+          "replies": [
+            "Yes",
+            "No"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "facebook": false
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1539014926,
+  "fallbackIntent": false,
+  "events": []
+}

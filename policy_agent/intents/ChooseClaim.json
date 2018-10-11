@@ -1,0 +1,43 @@
+{
+  "id": "82b37489-e358-47e8-826e-dc75f806b56b",
+  "name": "ChooseClaim",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.ChooseClaim",
+      "affectedContexts": [
+        {
+          "name": "ChooseClaim",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "id": "1d36ec0c-139b-4a95-8626-4725a994ab25",
+          "dataType": "@assitanceType",
+          "name": "assitanceType",
+          "value": "$assitanceType",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1539074795,
+  "fallbackIntent": false,
+  "events": []
+}

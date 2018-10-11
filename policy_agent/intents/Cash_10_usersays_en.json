@@ -1,0 +1,50 @@
+[
+  {
+    "id": "8715edaa-e40f-4810-b60a-a4894de9cd84",
+    "data": [
+      {
+        "text": "Self Quotes",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538130650
+  },
+  {
+    "id": "13365370-bb86-4d10-9630-73dd4fc87ed5",
+    "data": [
+      {
+        "text": "2 weeks",
+        "alias": "duration",
+        "meta": "@sys.duration",
+        "userDefined": false
+      },
+      {
+        "text": " repair",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538130650
+  },
+  {
+    "id": "cf300b1e-a3db-452a-9ae7-8a291fd93bf2",
+    "data": [
+      {
+        "text": "Cash Payment of ",
+        "userDefined": false
+      },
+      {
+        "text": "USD 650",
+        "alias": "currency-name",
+        "meta": "@sys.currency-name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1538033734
+  }
+]

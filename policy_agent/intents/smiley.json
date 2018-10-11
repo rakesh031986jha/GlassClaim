@@ -1,0 +1,31 @@
+{
+  "id": "be2f4f0f-43b2-47ce-af7e-c5ff2f1c5a34",
+  "name": "smiley",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Happy to hear that 😊"
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "facebook": false,
+        "google": false
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1527768832,
+  "fallbackIntent": false,
+  "events": []
+}

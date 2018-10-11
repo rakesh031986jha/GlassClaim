@@ -1,0 +1,16 @@
+[
+  {
+    "id": "862eaac1-607a-4a32-8311-e94e92d53fa5",
+    "data": [
+      {
+        "text": "Claims",
+        "alias": "assitanceType",
+        "meta": "@assitanceType",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1539074795
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "id": "b2e03416-79d2-446d-b3f9-e67987a2207e",
+  "name": "UnderIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.Underwriting",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "b0705cc7-6aff-4c99-900e-433ec0847ed8",
+          "dataType": "@assitanceType",
+          "name": "assitanceType",
+          "value": "$assitanceType",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1539074771,
+  "fallbackIntent": false,
+  "events": []
+}

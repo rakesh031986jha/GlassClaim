@@ -1,0 +1,40 @@
+{
+  "id": "d1bf74fe-32d9-4f05-9130-3308ecb5ab44",
+  "name": "riskClass",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "riskClass",
+      "affectedContexts": [
+        {
+          "name": "riskClass-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "d478404c-18ef-4898-8ef0-ad0200dd0aef",
+          "required": false,
+          "dataType": "@RiskClass",
+          "name": "RiskClass",
+          "value": "$RiskClass",
+          "isList": false
+        }
+      ],
+      "messages": [],
+      "defaultResponsePlatforms": {
+        "facebook": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1539061955,
+  "fallbackIntent": false,
+  "events": []
+}

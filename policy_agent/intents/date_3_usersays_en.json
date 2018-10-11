@@ -1,0 +1,304 @@
+[
+  {
+    "id": "d74da564-fb83-4c64-9149-9e867a5dd807",
+    "data": [
+      {
+        "text": "day before",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548267
+  },
+  {
+    "id": "b47b66d6-2b55-415e-a305-bf61649d0a5f",
+    "data": [
+      {
+        "text": "It happened ",
+        "userDefined": false
+      },
+      {
+        "text": "on sunday",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548267
+  },
+  {
+    "id": "a4574573-1b8f-4005-8c45-e8b06e62efce",
+    "data": [
+      {
+        "text": "It happened ",
+        "userDefined": false
+      },
+      {
+        "text": "on last Saturday",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548267
+  },
+  {
+    "id": "cbbe0161-63bf-479e-9fc7-48fffa4d832b",
+    "data": [
+      {
+        "text": "It happened ",
+        "userDefined": false
+      },
+      {
+        "text": "on last friday",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548267
+  },
+  {
+    "id": "de7cd02c-ed52-41f1-b028-8c7cf107f12c",
+    "data": [
+      {
+        "text": "It happened ",
+        "userDefined": false
+      },
+      {
+        "text": "on last thursday",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548267
+  },
+  {
+    "id": "b96165fa-70f1-4eb6-a728-7204f0f245dc",
+    "data": [
+      {
+        "text": "It happened ",
+        "userDefined": false
+      },
+      {
+        "text": "on last wednesday",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548267
+  },
+  {
+    "id": "edb85f0b-2244-4c27-853e-dc9b50a3bfb2",
+    "data": [
+      {
+        "text": "It happened ",
+        "userDefined": false
+      },
+      {
+        "text": "on last tuesday",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548267
+  },
+  {
+    "id": "2fdebbff-9815-45dd-aa4e-936fb3a37ccf",
+    "data": [
+      {
+        "text": "It happened ",
+        "userDefined": false
+      },
+      {
+        "text": "on last monday",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548267
+  },
+  {
+    "id": "3c31ceeb-79ee-4bb5-903d-51a553a4e377",
+    "data": [
+      {
+        "text": "It happened on ",
+        "userDefined": false
+      },
+      {
+        "text": "yesterday",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548267
+  },
+  {
+    "id": "a007821a-81ea-4ee9-8b53-9ded707ca4cf",
+    "data": [
+      {
+        "text": "It happened on ",
+        "userDefined": false
+      },
+      {
+        "text": "today",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548267
+  },
+  {
+    "id": "aa163cd6-2ee0-40ba-b3ea-9459830321f0",
+    "data": [
+      {
+        "text": "last sunday",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548043
+  },
+  {
+    "id": "9ca620d2-5d4e-4499-be91-284411133c13",
+    "data": [
+      {
+        "text": "last Saturday",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548043
+  },
+  {
+    "id": "9fe0f8a4-6f50-46ce-822e-56aca7f8e1d9",
+    "data": [
+      {
+        "text": "last friday",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548043
+  },
+  {
+    "id": "a720e258-fd39-4639-98a9-4faf1305c089",
+    "data": [
+      {
+        "text": "last Thursday",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548043
+  },
+  {
+    "id": "f95dcd18-dd21-4954-99c3-95394a59717e",
+    "data": [
+      {
+        "text": "last Wednesday",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548043
+  },
+  {
+    "id": "07466dcb-a33c-46a8-83a0-946b92b899f3",
+    "data": [
+      {
+        "text": "last tuesday",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548043
+  },
+  {
+    "id": "03dbb21d-f084-4413-93a5-8e39e4f26df9",
+    "data": [
+      {
+        "text": "last monday",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548043
+  },
+  {
+    "id": "bab40ea2-74cb-4018-8aac-c625b15a899c",
+    "data": [
+      {
+        "text": "yesterday",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548043
+  },
+  {
+    "id": "b6cf0b9e-6067-4fd0-8386-b62897e97d17",
+    "data": [
+      {
+        "text": "today",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538548043
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "id": "a1f3056b-5b84-440e-98a7-dc3a9625ae79",
+  "name": "discount",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.discount",
+      "affectedContexts": [
+        {
+          "name": "discount-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "fac51b76-de2f-4cc1-9d9e-3b8d0c390e8c",
+          "required": false,
+          "dataType": "@sys.number-integer",
+          "name": "NoOfCoverages",
+          "value": "$NoOfCoverages",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "How many coverage sections have you offered?"
+            }
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [],
+      "defaultResponsePlatforms": {
+        "facebook": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1539060245,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,33 @@
+{
+  "id": "0d75fe28-7d37-4cb6-89e0-e63d8312bc38",
+  "parentId": "a1f3056b-5b84-440e-98a7-dc3a9625ae79",
+  "rootParentId": "a1f3056b-5b84-440e-98a7-dc3a9625ae79",
+  "name": "discount - no",
+  "auto": true,
+  "contexts": [
+    "discount-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "discount.discount-no",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "See you again 🙂"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1528887289,
+  "fallbackIntent": false,
+  "events": []
+}

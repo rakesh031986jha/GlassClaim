@@ -1,0 +1,49 @@
+{
+  "description": "",
+  "language": "en",
+  "shortDescription": "Get traffic details",
+  "examples": "User: What\u0027s traffic like between London and Bristol?\nUser: How bad is this traffic jam?\nUser: What\u0027s I-95 looking like right now?",
+  "activeAssistantAgents": [],
+  "disableInteractionLogs": true,
+  "disableStackdriverLogs": true,
+  "googleAssistant": {
+    "googleAssistantCompatible": false,
+    "project": "quote-buy",
+    "welcomeIntentSignInRequired": false,
+    "startIntents": [],
+    "systemIntents": [],
+    "endIntentIds": [
+      "cbf11d73-73eb-4bf2-b703-c987936f102a"
+    ],
+    "oAuthLinking": {
+      "required": false,
+      "grantType": "AUTH_CODE_GRANT"
+    },
+    "voiceType": "MALE_1",
+    "capabilities": [],
+    "protocolVersion": "V2",
+    "isDeviceAgent": false
+  },
+  "defaultTimezone": "America/New_York",
+  "webhook": {
+    "url": "https://fbclaim.herokuapp.com//fulfillment",
+    "headers": {
+      "": ""
+    },
+    "available": true,
+    "useForDomains": false,
+    "cloudFunctionsEnabled": false,
+    "cloudFunctionsInitialized": false
+  },
+  "isPrivate": true,
+  "customClassifierMode": "use.after",
+  "mlMinConfidence": 0.2,
+  "supportedLanguages": [],
+  "onePlatformApiVersion": "v1legacy",
+  "analyzeQueryTextSentiment": false,
+  "enabledKnowledgeBaseNames": [
+    "projects/traffic-status/knowledgeBases/NzEyNzc5MDgzNTI0Mzk0MTg4OA"
+  ],
+  "knowledgeServiceConfidenceAdjustment": 0.5,
+  "dialogBuilderMode": false
+}

@@ -1,0 +1,55 @@
+{
+  "id": "f403c0b3-69e6-4bb0-9a0f-9fde7c0ad860",
+  "parentId": "0ad95c2f-b15c-46de-ae2f-960b5634cbf5",
+  "rootParentId": "0ad95c2f-b15c-46de-ae2f-960b5634cbf5",
+  "name": "higherDeductible - yes",
+  "auto": true,
+  "contexts": [
+    "higherDeductible-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "higherDeductible.higherDeductible-yes",
+      "affectedContexts": [
+        {
+          "name": "higherDeductible-yes-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "platform": "facebook",
+          "lang": "en",
+          "speech": "Can you confirm your query type"
+        },
+        {
+          "type": 2,
+          "platform": "facebook",
+          "lang": "en",
+          "title": "",
+          "replies": [
+            "Risk Class",
+            "Deductible",
+            "Discount",
+            "Coverage",
+            "Others"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "facebook": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1539014955,
+  "fallbackIntent": false,
+  "events": []
+}

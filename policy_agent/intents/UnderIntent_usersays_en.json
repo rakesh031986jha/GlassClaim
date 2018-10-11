@@ -1,0 +1,16 @@
+[
+  {
+    "id": "e9026719-51bd-4f5f-b429-86880976e0d8",
+    "data": [
+      {
+        "text": "Quote",
+        "alias": "assitanceType",
+        "meta": "@assitanceType",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1539074771
+  }
+]

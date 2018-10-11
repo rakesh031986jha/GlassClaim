@@ -1,0 +1,26 @@
+[
+  {
+    "id": "d98e7a62-c3d7-4320-b03f-e5402239c6b1",
+    "data": [
+      {
+        "text": "Can I select a coverage level deductible?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1539014645
+  },
+  {
+    "id": "9917d443-9387-40b6-a6a8-06c1b680c4fa",
+    "data": [
+      {
+        "text": "can i select less coverage",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1528804374
+  }
+]

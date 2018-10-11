@@ -1,0 +1,16 @@
+[
+  {
+    "id": "9918ff78-a96c-4e5c-bcff-62b792efdccf",
+    "data": [
+      {
+        "text": "others",
+        "alias": "queryType",
+        "meta": "@queryType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527769486
+  }
+]

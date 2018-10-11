@@ -1,0 +1,156 @@
+[
+  {
+    "id": "197d686c-45f4-4491-bb51-97a26593129a",
+    "data": [
+      {
+        "text": "Heat Strengthened Glass",
+        "alias": "GlassType",
+        "meta": "@GlassType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032980
+  },
+  {
+    "id": "c78b3c1b-809b-431e-bc37-7f992b96591c",
+    "data": [
+      {
+        "text": "Wired Glass",
+        "alias": "GlassType",
+        "meta": "@GlassType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032980
+  },
+  {
+    "id": "a2ad39f5-c1ad-4df1-9e49-4ee41c7045cc",
+    "data": [
+      {
+        "text": "Low-E Glass",
+        "alias": "GlassType",
+        "meta": "@GlassType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032980
+  },
+  {
+    "id": "2e978929-6f5a-4b76-9cd9-3293a6951ea0",
+    "data": [
+      {
+        "text": "Mirrored Glass",
+        "alias": "GlassType",
+        "meta": "@GlassType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032980
+  },
+  {
+    "id": "b7ac0465-49f3-4349-86ae-d62c097685b2",
+    "data": [
+      {
+        "text": "Insulated Glass",
+        "alias": "GlassType",
+        "meta": "@GlassType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032980
+  },
+  {
+    "id": "afc3fb18-73dc-4d1d-a737-fd644cbffaf7",
+    "data": [
+      {
+        "text": "Tempered Glass",
+        "alias": "GlassType",
+        "meta": "@GlassType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032980
+  },
+  {
+    "id": "bf8e7f49-c20b-4643-b8ae-2543908b65b0",
+    "data": [
+      {
+        "text": "Tinted Glass",
+        "alias": "GlassType",
+        "meta": "@GlassType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032980
+  },
+  {
+    "id": "47105431-b1cf-47a5-b773-520615085261",
+    "data": [
+      {
+        "text": "Float Glass",
+        "alias": "GlassType",
+        "meta": "@GlassType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1538032980
+  },
+  {
+    "id": "ac10c671-7546-4ed1-8dc0-810c2a269d2d",
+    "data": [
+      {
+        "text": "Safety Laminated Glass",
+        "alias": "GlassType",
+        "meta": "@GlassType",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1536928398
+  },
+  {
+    "id": "5c5f7dda-015e-4e3e-ad48-406fa60c79b0",
+    "data": [
+      {
+        "text": "Obscured Glass",
+        "alias": "GlassType",
+        "meta": "@GlassType",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1536928398
+  },
+  {
+    "id": "13e21cec-6b25-4c64-8e0e-dbd6faa3af2e",
+    "data": [
+      {
+        "text": "Annealed Glass",
+        "alias": "GlassType",
+        "meta": "@GlassType",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1537505606
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "id": "e5a2727d-cb69-4139-a9e2-990d2fceaba1",
+  "name": "date_3",
+  "auto": true,
+  "contexts": [
+    "ChooseBreakage"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.date",
+      "affectedContexts": [
+        {
+          "name": "date_3",
+          "parameters": {},
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "id": "958c875e-f8d3-4bd7-bcf4-ee422df501e3",
+          "required": true,
+          "dataType": "@sys.date",
+          "name": "date",
+          "value": "$date",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "When did the accident occur? \nIt happened on 31st Aug / Yesterday / Today / Day before"
+            }
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1539015662,
+  "fallbackIntent": false,
+  "events": []
+}
